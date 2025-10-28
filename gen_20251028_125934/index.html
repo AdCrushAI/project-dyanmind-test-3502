@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdCrush.AI - Dyanmind-Test-Celery</title>
+    
+    <!-- Aggressive cache-busting -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Fuse.js for fuzzy search -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    
+    <!-- Chart.js for analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <!-- Gallery Styles -->
+    <link rel="stylesheet" href="gallery_style.css?v=1761656406514">
+</head>
+<body>
+    <!-- Simple Title Bar -->
+    <div class="title-bar">
+        <div class="container title-bar-content">
+            <div class="title-breadcrumb">
+                <a href="../index.html" class="title-logo">
+                    <span class="material-icons">bolt</span>
+                    <span>AdCrush</span>
+                </a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Dyanmind-Test-Celery - Oct 28, 2025</span>
+            </div>
+            <div class="title-actions">
+                <button class="new-deck-btn" onclick="openRequestDeckModal()" title="Request New Deck">
+                    <span class="material-icons">bolt</span>
+                    <span>New Deck</span>
+                </button>
+                <button class="help-btn" onclick="openTutorialModal()" title="Help & Tutorial">
+                    <span class="material-icons">help_outline</span>
+                </button>
+                <button class="menu-btn" onclick="openMenu()" title="Menu">
+                    <span class="material-icons">menu</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Dynamic Control Bar (Consolidated) -->
+    <section class="dynamic-control-bar" style="margin-top: 56px;">
+        <div class="container">
+            <!-- Row 1: Tabs (All/Crush) -->
+            <div class="control-row tabs-row">
+                <div class="top-tabs">
+                    <button class="top-tab active" data-tab="all" onclick="switchTab('all')">
+                        All (<span id="count-all">0</span>)
+                    </button>
+                    <button class="top-tab" data-tab="crushes" onclick="switchTab('crushes')">
+                        <span class="material-icons" style="font-size: 1.125rem; vertical-align: middle;">bolt</span> CRUSH (<span id="count-crushes">0</span>)
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Row 2: Project Title + Stats -->
+            <div class="control-row title-row">
+                <div class="project-info">
+                    <h2 class="project-title" id="dynamic-project-name">Loading...</h2>
+                    <span class="project-stats" id="dynamic-stats"></span>
+                </div>
+            </div>
+            
+            <!-- Row 3: Search + Filters (inline desktop, stacked mobile) -->
+            <div class="control-row filters-row">
+                <div class="search-box">
+                    <span class="search-icon material-icons">search</span>
+                    <input 
+                        type="text" 
+                        id="search" 
+                        placeholder="Search by persona, hook, style, tags, or copy..."
+                        autocomplete="off"
+                    >
+                    <button class="search-clear" id="search-clear" title="Clear search">
+                        <span class="material-icons">close</span>
+                    </button>
+                </div>
+                <div class="filter-actions">
+                    <button class="action-btn" onclick="openBrowseIndexModal()" title="Browse by Category">
+                        <span class="material-icons">dashboard</span>
+                        <span>Index</span>
+                    </button>
+                    <button class="action-btn" onclick="openGenerationFiltersModal()" title="Generation Filters">
+                        <span class="material-icons">tune</span>
+                        <span>Filters</span>
+                    </button>
+                    <button class="action-btn" id="perfect-toggle" onclick="togglePerfectMode()" title="Hide ads with text issues">
+                        <span class="material-icons">spellcheck</span>
+                        <span>Perfect</span>
+                    </button>
+                    <button class="action-btn" id="clear-all-filters" onclick="clearAllFilters()" title="Clear all active filters" style="display: none;">
+                        <span class="material-icons">filter_alt_off</span>
+                        <span>Clear All</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+
+
+            <!-- Tag Filter Pills -->
+            <div id="tag-pills" class="tag-pills-container">
+                <div class="tag-pills" id="tag-pills-list">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div id="gallery" class="gallery">
+                <div class="loading">Loading gallery...</div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Styles Modal -->
+    <div id="styles-modal" class="modal" onclick="closeStylesModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2>Brand Style Variants</h2>
+                <button class="modal-close" onclick="closeStylesModal(event)">×</button>
+            </div>
+            <div class="modal-body" id="styles-modal-body">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Personas Modal -->
+    <div id="personas-modal" class="modal" onclick="closePersonasModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2>Target Personas</h2>
+                <button class="modal-close" onclick="closePersonasModal(event)">×</button>
+            </div>
+            <div class="modal-body" id="personas-modal-body">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Hooks Modal -->
+    <div id="hooks-modal" class="modal" onclick="closeHooksModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2>All Hooks</h2>
+                <button class="modal-close" onclick="closeHooksModal(event)">×</button>
+            </div>
+            <div class="modal-body" id="hooks-modal-body">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- All Tags Modal -->
+    <div id="all-tags-modal" class="modal" onclick="closeAllTagsModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2>All Tags</h2>
+                <button class="modal-close" onclick="closeAllTagsModal(event)">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="search-box" style="margin-bottom: 1rem;">
+                    <span class="search-icon material-icons">search</span>
+                    <input 
+                        type="text" 
+                        id="tags-modal-search" 
+                        placeholder="Search tags..."
+                        autocomplete="off"
+                    >
+                </div>
+                <div id="all-tags-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.5rem; max-height: 60vh; overflow-y: auto;">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Menu Modal -->
+    <div id="menu-modal" class="modal" onclick="closeMenu(event)">
+        <div class="modal-content" onclick="event.stopPropagation()" style="max-width: 500px;">
+            <div class="modal-header">
+                <h2>Menu</h2>
+                <button class="modal-close" onclick="closeMenu(event)">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="menu-options">
+                    <button class="menu-option-btn" onclick="openAboutModal()">
+                        <span class="material-icons">info</span>
+                        <div>
+                            <strong>About</strong>
+                            <p>How this gallery was generated</p>
+                        </div>
+                    </button>
+                    <button class="menu-option-btn" onclick="openViewConfigModal()">
+                        <span class="material-icons">visibility</span>
+                        <div>
+                            <strong>View Current Config</strong>
+                            <p>See the settings used for this deck</p>
+                        </div>
+                    </button>
+                    <button class="menu-option-btn" onclick="openRequestDeckModal()">
+                        <span class="material-icons">rocket_launch</span>
+                        <div>
+                            <strong>Request New Deck</strong>
+                            <p>Submit a new deck generation request</p>
+                        </div>
+                    </button>
+                    <button class="menu-option-btn" onclick="openShareCrushesModal()">
+                        <span class="material-icons">share</span>
+                        <div>
+                            <strong>Share Crushes (<span id="menu-crushes-count">0</span>)</strong>
+                            <p>Share your favorite ads via email</p>
+                        </div>
+                    </button>
+                    <div class="menu-option-expandable">
+                        <button class="menu-option-btn" onclick="toggleDownloadSubmenu(event)">
+                            <span class="material-icons">download</span>
+                            <div>
+                                <strong>Download</strong>
+                                <p>Download ads in batch</p>
+                            </div>
+                            <span class="material-icons expand-icon">expand_more</span>
+                        </button>
+                        <div class="submenu collapsed" id="download-submenu">
+                            <button class="submenu-btn" onclick="downloadAllFromMenu()">
+                                <span class="material-icons">download</span>
+                                <span>Download All (<span id="menu-download-all-count">0</span>)</span>
+                            </button>
+                            <button class="submenu-btn" onclick="downloadCrushesFromMenu()">
+                                <span class="material-icons">bolt</span>
+                                <span>Download Crushes (<span id="menu-download-crushes-count">0</span>)</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- About Modal -->
+    <div id="about-modal" class="modal" onclick="closeAboutModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2>About AdCrush</h2>
+                <button class="modal-close" onclick="closeAboutModal(event)">×</button>
+            </div>
+            <div class="modal-body">
+                <p>This gallery showcases AI-generated advertisements created using the AdCrush platform.</p>
+                
+                <h3>The Process:</h3>
+                <ol>
+                    <li><strong>Brand Analysis:</strong> We analyze your brand identity, values, and target audience</li>
+                    <li><strong>Persona Development:</strong> AI generates detailed customer personas with unique pain points and hooks</li>
+                    <li><strong>Style Variants:</strong> Multiple visual styles are created aligned with your brand aesthetic</li>
+                    <li><strong>Ad Generation:</strong> High-quality images are generated with semantic tags for easy discovery</li>
+                    <li><strong>Smart Gallery:</strong> Browse, search, and filter ads with powerful fuzzy search</li>
+                </ol>
+                
+                <h3>Features:</h3>
+                <ul>
+                    <li><span class="material-icons" style="font-size: 1rem; vertical-align: middle; margin-right: 0.25rem;">search</span> <strong>Fuzzy Search:</strong> Find ads even with typos</li>
+                    <li><span class="material-icons" style="font-size: 1rem; vertical-align: middle; margin-right: 0.25rem;">bolt</span> <strong>Crushes:</strong> Save your favorites with one click</li>
+                    <li><span class="material-icons" style="font-size: 1rem; vertical-align: middle; margin-right: 0.25rem;">local_offer</span> <strong>Semantic Tags:</strong> AI-generated marketing tags for each ad</li>
+                    <li><span class="material-icons" style="font-size: 1rem; vertical-align: middle; margin-right: 0.25rem;">bar_chart</span> <strong>Analytics:</strong> Visualize tag distributions and trends</li>
+                    <li><span class="material-icons" style="font-size: 1rem; vertical-align: middle; margin-right: 0.25rem;">download</span> <strong>Batch Download:</strong> Download multiple ads at once</li>
+                </ul>
+                
+                <div class="contact-section">
+                    <h3>Want to Learn More?</h3>
+                    <p>Contact us to create your own custom ad campaigns:</p>
+                    <a href="mailto:hassan@waken.ai" class="contact-btn">
+                        <span class="material-icons" style="font-size: 1.25rem;">email</span>
+                        hassan@waken.ai
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- View Config Modal -->
+    <div id="view-config-modal" class="modal" onclick="closeViewConfigModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2>Current Configuration</h2>
+                <button class="modal-close" onclick="closeViewConfigModal(event)">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="config-tabs">
+                    <button class="config-tab active" data-config="brand" onclick="switchConfigTab('brand')">Brand</button>
+                    <button class="config-tab" data-config="personas" onclick="switchConfigTab('personas')">Personas</button>
+                    <button class="config-tab" data-config="styles" onclick="switchConfigTab('styles')">Styles</button>
+                    <button class="config-tab" data-config="overlays" onclick="switchConfigTab('overlays')">Overlays</button>
+                    <button class="config-tab" data-config="negative" onclick="switchConfigTab('negative')">Negative</button>
+                </div>
+                <div class="config-content">
+                    <textarea id="config-viewer" readonly></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Share Crushes Modal -->
+    <div id="share-crushes-modal" class="modal" onclick="closeShareCrushesModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2>Share Your Favorite Ads</h2>
+                <button class="modal-close" onclick="closeShareCrushesModal(event)">×</button>
+            </div>
+            <div class="modal-body">
+                <div id="share-crushes-empty" style="display: none; text-align: center; padding: 2rem;">
+                    <span class="material-icons" style="font-size: 4rem; color: var(--text-light); margin-bottom: 1rem;">bolt_off</span>
+                    <p style="color: var(--text-light);">No crushes yet! Click the bolt icon on any ad to add it to your favorites.</p>
+                </div>
+                <form id="share-crushes-form" onsubmit="submitShareCrushes(event)">
+                    <div class="form-section">
+                        <p>You've selected <strong id="share-crushes-total">0</strong> ad(s) to share</p>
+                    </div>
+                    
+                    <div class="form-section">
+                        <label>Selected Ads:</label>
+                        <div id="share-crushes-list" style="max-height: 200px; overflow-y: auto; background: var(--card-bg); padding: 1rem; border-radius: 8px; font-family: monospace; font-size: 0.875rem; line-height: 1.8;">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <label for="share-email">Your Email *</label>
+                        <input type="email" id="share-email" name="email" required placeholder="your@email.com">
+                    </div>
+                    
+                    <div class="form-section">
+                        <label for="share-message">Message (Optional)</label>
+                        <textarea id="share-message" name="message" rows="3" placeholder="Add a note about why you like these ads..."></textarea>
+                    </div>
+                    
+                    <input type="hidden" name="project" id="share-project-name">
+                    <input type="hidden" name="crushes" id="share-crushes-data">
+                    <input type="hidden" name="crushes_count" id="share-crushes-count-field">
+                    
+                    <button type="submit" class="submit-btn">
+                        <span class="material-icons">send</span>
+                        Share Crushes
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Request Deck Modal -->
+    <div id="request-deck-modal" class="modal" onclick="closeRequestDeckModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2>Request New Deck</h2>
+                <button class="modal-close" onclick="closeRequestDeckModal(event)">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="deck-request-form" onsubmit="submitDeckRequest(event)">
+                    <div class="form-section">
+                        <label for="request-email">Your Email *</label>
+                        <input type="email" id="request-email" name="email" required placeholder="your@email.com">
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Deck Configuration</h3>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="num-personas">Number of Personas *</label>
+                                <input type="number" id="num-personas" name="num_personas" min="1" max="20" value="3" required onchange="calculateTotal()">
+                            </div>
+                            <div class="form-col">
+                                <label for="num-styles">Number of Styles *</label>
+                                <input type="number" id="num-styles" name="num_styles" min="1" max="20" value="4" required onchange="calculateTotal()">
+                            </div>
+                            <div class="form-col">
+                                <label for="images-per-combo">Images per Combo *</label>
+                                <input type="number" id="images-per-combo" name="images_per_combo" min="1" max="10" value="2" required onchange="calculateTotal()">
+                            </div>
+                        </div>
+                        <div class="form-row" style="margin-top: 1rem;">
+                            <div class="form-col">
+                                <label for="aspect-ratio">Aspect Ratio</label>
+                                <select id="aspect-ratio" name="aspect_ratio">
+                                    <option value="">No Change (use current)</option>
+                                    <option value="1:1">Square (1:1)</option>
+                                    <option value="9:16">Mobile Portrait (9:16)</option>
+                                    <option value="16:9">Widescreen (16:9)</option>
+                                    <option value="4:3">Standard Landscape (4:3)</option>
+                                    <option value="3:4">Standard Portrait (3:4)</option>
+                                    <option value="3:2">Photo Landscape (3:2)</option>
+                                    <option value="2:3">Photo Portrait (2:3)</option>
+                                    <option value="21:9">Ultra-Wide (21:9)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <p class="total-images">Total Images: <strong id="total-images">24</strong></p>
+                    </div>
+                    
+                    <div class="form-section">
+                        <button type="button" class="config-toggle-btn" onclick="toggleConfigPanel()">
+                            <span class="material-icons config-toggle-icon">expand_more</span>
+                            <span>Customize Configuration (Optional)</span>
+                        </button>
+                        <div id="config-panel" class="config-panel collapsed">
+                            <div class="config-tabs">
+                                <button type="button" class="config-tab active" data-config="brand" onclick="switchRequestConfigTab(event, 'brand')">Brand</button>
+                                <button type="button" class="config-tab" data-config="personas" onclick="switchRequestConfigTab(event, 'personas')">Personas</button>
+                                <button type="button" class="config-tab" data-config="styles" onclick="switchRequestConfigTab(event, 'styles')">Styles</button>
+                                <button type="button" class="config-tab" data-config="overlays" onclick="switchRequestConfigTab(event, 'overlays')">Overlays</button>
+                            </div>
+                            <div class="config-content">
+                                <textarea id="request-config-editor" name="config_content"></textarea>
+                            </div>
+                            <input type="hidden" id="active-config-type" name="config_type" value="brand">
+                        </div>
+                    </div>
+                    
+                    <!-- Reference Images Upload (Progressive) -->
+                    <div class="form-section">
+                        <label>
+                            Reference Images (Optional)
+                            <span style="font-size: 0.75rem; color: var(--text-light); display: block; margin-top: 0.25rem;">
+                                Upload up to 3 reference images for style, composition, or product examples
+                            </span>
+                        </label>
+                        
+                        <div class="image-upload-slots" id="request-image-slots">
+                            <!-- Slot 1 (always visible) -->
+                            <div class="image-upload-slot" id="request-slot-1">
+                                <input type="file" id="request-image-1" accept="image/*" onchange="handleImageUpload(event, 'request', 1)" style="display: none;">
+                                <div class="upload-placeholder" onclick="document.getElementById('request-image-1').click()">
+                                    <span class="material-icons" style="font-size: 2rem; color: var(--primary);">add_photo_alternate</span>
+                                    <span style="font-size: 0.875rem; color: var(--text-light); margin-top: 0.5rem;">Click to upload</span>
+                                </div>
+                                <div class="image-preview-container" style="display: none;">
+                                    <img class="preview-img" src="" alt="Preview">
+                                    <button type="button" class="remove-image-btn" onclick="removeImage('request', 1)">
+                                        <span class="material-icons">close</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Slot 2 (hidden initially) -->
+                            <div class="image-upload-slot" id="request-slot-2" style="display: none;">
+                                <input type="file" id="request-image-2" accept="image/*" onchange="handleImageUpload(event, 'request', 2)" style="display: none;">
+                                <div class="upload-placeholder" onclick="document.getElementById('request-image-2').click()">
+                                    <span class="material-icons" style="font-size: 2rem; color: var(--primary);">add_photo_alternate</span>
+                                    <span style="font-size: 0.875rem; color: var(--text-light); margin-top: 0.5rem;">Click to upload</span>
+                                </div>
+                                <div class="image-preview-container" style="display: none;">
+                                    <img class="preview-img" src="" alt="Preview">
+                                    <button type="button" class="remove-image-btn" onclick="removeImage('request', 2)">
+                                        <span class="material-icons">close</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Slot 3 (hidden initially) -->
+                            <div class="image-upload-slot" id="request-slot-3" style="display: none;">
+                                <input type="file" id="request-image-3" accept="image/*" onchange="handleImageUpload(event, 'request', 3)" style="display: none;">
+                                <div class="upload-placeholder" onclick="document.getElementById('request-image-3').click()">
+                                    <span class="material-icons" style="font-size: 2rem; color: var(--primary);">add_photo_alternate</span>
+                                    <span style="font-size: 0.875rem; color: var(--text-light); margin-top: 0.5rem;">Click to upload</span>
+                                </div>
+                                <div class="image-preview-container" style="display: none;">
+                                    <img class="preview-img" src="" alt="Preview">
+                                    <button type="button" class="remove-image-btn" onclick="removeImage('request', 3)">
+                                        <span class="material-icons">close</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Hidden fields for base64 data -->
+                        <input type="hidden" name="reference_image_1" id="request-image-data-1">
+                        <input type="hidden" name="reference_image_2" id="request-image-data-2">
+                        <input type="hidden" name="reference_image_3" id="request-image-data-3">
+                    </div>
+                    
+                    <div class="form-section">
+                        <label for="additional-requirements">Additional Requirements</label>
+                        <textarea id="additional-requirements" name="requirements" rows="4" placeholder="Any special instructions or requirements..."></textarea>
+                    </div>
+                    
+                    <input type="hidden" name="project" id="request-project-name">
+                    <input type="hidden" name="brand_config" id="brand-config-hidden">
+                    <input type="hidden" name="personas_config" id="personas-config-hidden">
+                    <input type="hidden" name="styles_config" id="styles-config-hidden">
+                    <input type="hidden" name="overlays_config" id="overlays-config-hidden">
+                    
+                    <button type="submit" class="submit-btn">
+                        <span class="material-icons">rocket_launch</span>
+                        Submit Deck Request
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Generation Filters Modal -->
+    <div id="generation-filters-modal" class="modal" onclick="closeGenerationFiltersModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2>
+                    <span class="material-icons" style="font-size: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">tune</span>
+                    Generation Filters
+                </h2>
+                <button class="modal-close" onclick="closeGenerationFiltersModal(event)">×</button>
+            </div>
+            <div class="modal-body">
+                <p style="color: var(--text-light); margin-bottom: 1.5rem;">
+                    Filter ads by personas, hooks, and styles from this deck. 
+                    Multi-select within each category to see all matching ads (OR logic).
+                </p>
+                
+                <!-- Personas -->
+                <div style="margin-bottom: 2rem;">
+                    <label style="display: block; margin-bottom: 0.75rem; color: var(--text-primary); font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">
+                        <span class="material-icons" style="font-size: 1rem; vertical-align: middle; margin-right: 0.25rem;">person</span>
+                        Personas:
+                    </label>
+                    <div class="tag-pills" id="modal-persona-pills-list">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+                
+                <!-- Hooks -->
+                <div style="margin-bottom: 2rem;">
+                    <label style="display: block; margin-bottom: 0.75rem; color: var(--text-primary); font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">
+                        <span class="material-icons" style="font-size: 1rem; vertical-align: middle; margin-right: 0.25rem;">gps_fixed</span>
+                        Hooks:
+                    </label>
+                    <div class="tag-pills" id="modal-hook-pills-list">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+                
+                <!-- Styles -->
+                <div style="margin-bottom: 2rem;">
+                    <label style="display: block; margin-bottom: 0.75rem; color: var(--text-primary); font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">
+                        <span class="material-icons" style="font-size: 1rem; vertical-align: middle; margin-right: 0.25rem;">palette</span>
+                        Styles:
+                    </label>
+                    <div class="tag-pills" id="modal-style-pills-list">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+                
+                <!-- Actions -->
+                <div style="display: flex; gap: 1rem; justify-content: space-between; padding-top: 1rem; border-top: 1px solid var(--border);">
+                    <button class="modal-clear-btn" onclick="clearMetadataFilters(); renderMetadataFilters();" id="modal-clear-filters-btn" style="display: none;">
+                        <span class="material-icons" style="font-size: 1rem; margin-right: 0.5rem;">close</span>
+                        Clear All Filters
+                    </button>
+                    <button class="modal-apply-btn" onclick="applyGenerationFilters(event)">
+                        Apply Filters
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Download Options Modal -->
+    <div id="download-options-modal" class="modal" onclick="closeDownloadOptionsModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()" style="max-width: 500px;">
+            <div class="modal-header">
+                <h2>
+                    <span class="material-icons" style="font-size: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">download</span>
+                    Download Options
+                </h2>
+                <button class="modal-close" onclick="closeDownloadOptionsModal(event)">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="menu-options">
+                    <button class="menu-option-btn" onclick="downloadHQImage()">
+                        <span class="material-icons">image</span>
+                        <div>
+                            <strong>Download HQ Image</strong>
+                            <p>Save high-quality PNG to your device</p>
+                        </div>
+                    </button>
+                    <button class="menu-option-btn" onclick="copyFacebookText()">
+                        <span class="material-icons">content_copy</span>
+                        <div>
+                            <strong>Copy Facebook Text</strong>
+                            <p>Copy ad copy to clipboard</p>
+                        </div>
+                    </button>
+                    <button class="menu-option-btn" onclick="closeDownloadOptionsModal(event)" style="background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.3);">
+                        <span class="material-icons" style="color: #ef4444;">close</span>
+                        <div>
+                            <strong style="color: #ef4444;">Cancel</strong>
+                            <p style="color: #ef4444;">Close this dialog</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Edit Request Modal -->
+    <div id="edit-request-modal" class="modal" onclick="closeEditRequestModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2>
+                    <span class="material-icons" style="font-size: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">edit</span>
+                    Edit Image Request
+                </h2>
+                <button class="modal-close" onclick="closeEditRequestModal(event)">×</button>
+            </div>
+            <div class="modal-body">
+                <!-- Image Preview -->
+                <div style="margin-bottom: 1.5rem; text-align: center;">
+                    <img id="edit-image-preview" src="" alt="Current Image" style="max-width: 100%; max-height: 300px; border-radius: 12px; border: 2px solid var(--glass-border);">
+                </div>
+                
+                <form id="edit-request-form" onsubmit="submitEditRequest(event)">
+                    <div class="form-section">
+                        <label for="edit-request-text">What would you like to edit in this image? *</label>
+                        <textarea id="edit-request-text" name="edit_request" rows="4" required placeholder="Describe the changes you'd like to make..."></textarea>
+                    </div>
+                    
+                    <!-- Reference Images Upload (Progressive) -->
+                    <div class="form-section">
+                        <label>
+                            Reference Images (Optional)
+                            <span style="font-size: 0.75rem; color: var(--text-light); display: block; margin-top: 0.25rem;">
+                                Upload up to 3 reference images for style, composition, or product examples
+                            </span>
+                        </label>
+                        
+                        <div class="image-upload-slots" id="edit-image-slots">
+                            <!-- Slot 1 (always visible) -->
+                            <div class="image-upload-slot" id="edit-slot-1">
+                                <input type="file" id="edit-image-1" accept="image/*" onchange="handleImageUpload(event, 'edit', 1)" style="display: none;">
+                                <div class="upload-placeholder" onclick="document.getElementById('edit-image-1').click()">
+                                    <span class="material-icons" style="font-size: 2rem; color: var(--primary);">add_photo_alternate</span>
+                                    <span style="font-size: 0.875rem; color: var(--text-light); margin-top: 0.5rem;">Click to upload</span>
+                                </div>
+                                <div class="image-preview-container" style="display: none;">
+                                    <img class="preview-img" src="" alt="Preview">
+                                    <button type="button" class="remove-image-btn" onclick="removeImage('edit', 1)">
+                                        <span class="material-icons">close</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Slot 2 (hidden initially) -->
+                            <div class="image-upload-slot" id="edit-slot-2" style="display: none;">
+                                <input type="file" id="edit-image-2" accept="image/*" onchange="handleImageUpload(event, 'edit', 2)" style="display: none;">
+                                <div class="upload-placeholder" onclick="document.getElementById('edit-image-2').click()">
+                                    <span class="material-icons" style="font-size: 2rem; color: var(--primary);">add_photo_alternate</span>
+                                    <span style="font-size: 0.875rem; color: var(--text-light); margin-top: 0.5rem;">Click to upload</span>
+                                </div>
+                                <div class="image-preview-container" style="display: none;">
+                                    <img class="preview-img" src="" alt="Preview">
+                                    <button type="button" class="remove-image-btn" onclick="removeImage('edit', 2)">
+                                        <span class="material-icons">close</span>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Slot 3 (hidden initially) -->
+                            <div class="image-upload-slot" id="edit-slot-3" style="display: none;">
+                                <input type="file" id="edit-image-3" accept="image/*" onchange="handleImageUpload(event, 'edit', 3)" style="display: none;">
+                                <div class="upload-placeholder" onclick="document.getElementById('edit-image-3').click()">
+                                    <span class="material-icons" style="font-size: 2rem; color: var(--primary);">add_photo_alternate</span>
+                                    <span style="font-size: 0.875rem; color: var(--text-light); margin-top: 0.5rem;">Click to upload</span>
+                                </div>
+                                <div class="image-preview-container" style="display: none;">
+                                    <img class="preview-img" src="" alt="Preview">
+                                    <button type="button" class="remove-image-btn" onclick="removeImage('edit', 3)">
+                                        <span class="material-icons">close</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Hidden fields for base64 data -->
+                        <input type="hidden" name="reference_image_1" id="edit-image-data-1">
+                        <input type="hidden" name="reference_image_2" id="edit-image-data-2">
+                        <input type="hidden" name="reference_image_3" id="edit-image-data-3">
+                    </div>
+                    
+                    <div class="form-section">
+                        <label for="edit-variations-count">Number of variations: *</label>
+                        <select id="edit-variations-count" name="variations_count" required>
+                            <option value="2">2 variations</option>
+                            <option value="4" selected>4 variations</option>
+                            <option value="10">10 variations</option>
+                            <option value="20">20 variations</option>
+                            <option value="50">50 variations</option>
+                            <option value="100">100 variations</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-section">
+                        <label for="edit-email">Your Email *</label>
+                        <input type="email" id="edit-email" name="email" required placeholder="your@email.com">
+                    </div>
+                    
+                    <!-- Hidden fields for context -->
+                    <input type="hidden" name="project" id="edit-project-name">
+                    <input type="hidden" name="image_filename" id="edit-image-filename">
+                    <input type="hidden" name="request_type" value="edit_image">
+                    
+                    <button type="submit" class="submit-btn">
+                        <span class="material-icons">send</span>
+                        Submit Edit Request
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Batch Download Modal -->
+    <div id="batch-download-modal" class="modal" onclick="closeBatchDownloadModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()" style="max-width: 600px;">
+            <div class="modal-header">
+                <h2>
+                    <span class="material-icons" style="font-size: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">download</span>
+                    Download All
+                </h2>
+                <button class="modal-close" onclick="closeBatchDownloadModal(event)">×</button>
+            </div>
+            <div class="modal-body">
+                <p style="margin-bottom: 1.5rem;">Download all <strong id="batch-download-count">0</strong> image(s) from your current view.</p>
+                
+                <div class="detail-card" style="margin-bottom: 1.5rem;">
+                    <h3>Active Filters:</h3>
+                    <p id="batch-download-filters">All ads</p>
+                </div>
+                
+                <div style="background: rgba(99, 102, 241, 0.1); padding: 1rem; border-radius: 12px; margin-bottom: 1.5rem;">
+                    <p style="margin: 0; color: var(--text-light); font-size: 0.875rem;">
+                        <span class="material-icons" style="font-size: 1rem; vertical-align: middle; margin-right: 0.25rem;">info</span>
+                        Files will download one by one with a small delay. Your browser may prompt you to allow multiple downloads.
+                    </p>
+                </div>
+                
+                <div style="display: flex; gap: 1rem; justify-content: flex-end;">
+                    <button class="modal-clear-btn" onclick="closeBatchDownloadModal(event)">
+                        Cancel
+                    </button>
+                    <button class="modal-apply-btn" onclick="startBatchDownload()">
+                        <span class="material-icons" style="font-size: 1rem; margin-right: 0.5rem;">download</span>
+                        Start Download
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Browse Index Modal -->
+    <div id="browse-index-modal" class="modal" onclick="closeBrowseIndexModal(event)">
+        <div class="modal-content modal-content-wide" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2>
+                    <span class="material-icons" style="font-size: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">dashboard</span>
+                    Browse by Category
+                </h2>
+                <button class="modal-close" onclick="closeBrowseIndexModal(event)">×</button>
+            </div>
+            <div class="modal-body">
+                <p style="color: var(--text-light); margin-bottom: 2rem;">
+                    Quick start: Select any category to clear all filters and focus on that group.
+                </p>
+                
+                <!-- Personas -->
+                <div class="index-category">
+                    <h3>
+                        <span class="material-icons" style="font-size: 1.25rem; vertical-align: middle; margin-right: 0.5rem;">person</span>
+                        Personas
+                    </h3>
+                    <div class="index-grid" id="index-personas-grid">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+                
+                <!-- Hooks -->
+                <div class="index-category">
+                    <h3>
+                        <span class="material-icons" style="font-size: 1.25rem; vertical-align: middle; margin-right: 0.5rem;">gps_fixed</span>
+                        Hooks
+                    </h3>
+                    <div class="index-grid" id="index-hooks-grid">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+                
+                <!-- Styles -->
+                <div class="index-category">
+                    <h3>
+                        <span class="material-icons" style="font-size: 1.25rem; vertical-align: middle; margin-right: 0.5rem;">palette</span>
+                        Styles
+                    </h3>
+                    <div class="index-grid" id="index-styles-grid">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Tutorial Modal -->
+    <div id="tutorial-modal" class="modal" onclick="closeTutorialModal(event)">
+        <div class="modal-content modal-content-wide" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2>
+                    <span class="material-icons" style="font-size: 1.5rem; vertical-align: middle; margin-right: 0.5rem;">school</span>
+                    Quick Start Tutorial
+                </h2>
+                <button class="modal-close" onclick="closeTutorialModal(event)">×</button>
+            </div>
+            <div class="modal-body" style="padding: 2rem 3rem;">
+                <!-- Hero Workflow Section -->
+                <div style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(192, 132, 252, 0.1) 100%); padding: 2rem; border-radius: 16px; border: 2px solid var(--primary); margin-bottom: 2rem;">
+                    <h2 style="font-size: 1.75rem; font-weight: 800; color: var(--primary-light); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
+                        <span class="material-icons" style="font-size: 2rem;">bolt</span>
+                        Curation Workflow
+                    </h2>
+                    <p style="font-size: 1.125rem; line-height: 1.8; color: var(--text); margin-bottom: 1.5rem;">
+                        <strong style="color: var(--primary-light);">The fastest way to get exactly what you want:</strong>
+                    </p>
+                    <ol style="font-size: 1rem; line-height: 1.8; color: var(--text); margin-left: 1.5rem;">
+                        <li style="margin-bottom: 1rem;">
+                            <strong style="color: var(--accent);">Browse & Crush:</strong> 
+                            Click the <span class="material-icons" style="font-size: 1rem; vertical-align: middle; color: var(--crush-active);">bolt</span> icon on ads you like to save them as "Crushes"
+                        </li>
+                        <li style="margin-bottom: 1rem;">
+                            <strong style="color: var(--accent);">Share Your Feedback:</strong> 
+                            Go to <strong>Menu → Share Crushes</strong> and tell us:
+                            <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+                                <li>What you love about these ads</li>
+                                <li>What changes you'd like (colors, text, style, personas, etc.)</li>
+                                <li>Any specific requests or variations you want</li>
+                            </ul>
+                        </li>
+                        <li style="margin-bottom: 0;">
+                            <strong style="color: var(--accent);">Get Your Custom Batch:</strong> 
+                            We'll create a new deck based on your crushes and feedback - perfectly tailored to what works for you!
+                        </li>
+                    </ol>
+                    <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(251, 191, 36, 0.1); border-left: 3px solid var(--crush-active); border-radius: 8px;">
+                        <p style="margin: 0; color: var(--text); font-size: 0.9375rem;">
+                            <span class="material-icons" style="font-size: 1rem; vertical-align: middle; margin-right: 0.25rem; color: var(--crush-active);">tips_and_updates</span>
+                            <strong>Pro Tip:</strong> The more crushes you share with specific feedback, the better we can refine your next batch!
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Edit Individual Ads Section -->
+                <div style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(192, 132, 252, 0.1) 100%); padding: 2rem; border-radius: 16px; border: 2px solid var(--primary); margin-bottom: 3rem;">
+                    <h2 style="font-size: 1.75rem; font-weight: 800; color: var(--primary-light); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem;">
+                        <span class="material-icons" style="font-size: 2rem;">edit</span>
+                        Edit Individual Ads
+                    </h2>
+                    <p style="font-size: 1.125rem; line-height: 1.8; color: var(--text); margin-bottom: 1rem;">
+                        From the feed or full view, tap <strong style="color: var(--primary-light);">Edit</strong> to request a new batch with changes on that specific image.
+                    </p>
+                    <p style="font-size: 1rem; line-height: 1.8; color: var(--text); margin: 0;">
+                        Perfect for tweaking text, colors, style, or any specific element you want to adjust!
+                    </p>
+                </div>
+                
+                <!-- Tutorial Steps -->
+                <div class="tutorial-steps">
+                    <!-- Step 1: Browse & Discover -->
+                    <div class="tutorial-step">
+                        <div class="tutorial-step-icon">
+                            <span class="material-icons">search</span>
+                        </div>
+                        <div class="tutorial-step-content">
+                            <h3>1. Browse & Discover</h3>
+                            <p><strong>Search</strong> with powerful fuzzy matching - find ads even with typos!</p>
+                            <p><strong>Filter</strong> by personas, hooks, and styles using the Filters button</p>
+                            <p><strong>Browse Index</strong> for quick category navigation with visual thumbnails</p>
+                            <p><strong>Perfect Mode</strong> hides ads with text rendering issues</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2: Save Crushes -->
+                    <div class="tutorial-step">
+                        <div class="tutorial-step-icon" style="color: var(--crush-active);">
+                            <span class="material-icons">bolt</span>
+                        </div>
+                        <div class="tutorial-step-content">
+                            <h3>2. Save Your Crushes ⚡</h3>
+                            <p><strong>Click the bolt icon</strong> on any ad to save it as a favorite</p>
+                            <p><strong>View all crushes</strong> in the CRUSH tab at the top</p>
+                            <p><strong>Share crushes</strong> via email from the Menu</p>
+                            <p>Crushes are saved locally in your browser</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3: Request New Decks -->
+                    <div class="tutorial-step">
+                        <div class="tutorial-step-icon" style="color: var(--success);">
+                            <span class="material-icons">rocket_launch</span>
+                        </div>
+                        <div class="tutorial-step-content">
+                            <h3>3. Request New Decks 🚀</h3>
+                            <p><strong>Click "New Deck"</strong> button to submit custom generation requests</p>
+                            <p><strong>Configure</strong> personas, styles, samples, and aspect ratios</p>
+                            <p><strong>Customize</strong> brand settings, overlays, and negative constraints</p>
+                            <p>We'll review your request and generate a fresh batch!</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4: Download & Organize -->
+                    <div class="tutorial-step">
+                        <div class="tutorial-step-icon" style="color: var(--accent);">
+                            <span class="material-icons">download</span>
+                        </div>
+                        <div class="tutorial-step-content">
+                            <h3>4. Download & Organize 📥</h3>
+                            <p><strong>Click any ad</strong> to open lightbox view with full details</p>
+                            <p><strong>Download individual</strong> high-quality PNGs from lightbox</p>
+                            <p><strong>Batch download</strong> all filtered results using Download All button</p>
+                            <p><strong>Copy ad text</strong> directly to clipboard for use in campaigns</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 5: Advanced Features -->
+                    <div class="tutorial-step">
+                        <div class="tutorial-step-icon" style="color: var(--primary-light);">
+                            <span class="material-icons">tune</span>
+                        </div>
+                        <div class="tutorial-step-content">
+                            <h3>5. Advanced Features 🎯</h3>
+                            <p><strong>AI Visual Tags:</strong> Each ad analyzed by Gemini Vision for rich metadata</p>
+                            <p><strong>Semantic Marketing Tags:</strong> Demographic expansions for precise targeting</p>
+                            <p><strong>Lightbox Navigation:</strong> Arrow keys or buttons to browse through ads</p>
+                            <p><strong>Clear All Filters:</strong> Reset all active filters with one click</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Don't Show Again Checkbox -->
+                <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--glass-border); display: flex; align-items: center; justify-content: space-between;">
+                    <label style="display: flex; align-items: center; gap: 0.75rem; cursor: pointer; color: var(--text-light); font-size: 0.875rem;">
+                        <input type="checkbox" id="dont-show-tutorial" style="width: 18px; height: 18px; cursor: pointer;">
+                        <span>Don't show this tutorial again</span>
+                    </label>
+                    <button class="modal-apply-btn" onclick="closeTutorialModal(event)">
+                        Got It!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+        <!-- Content (No overlays - maximizes image visibility) -->
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <div class="lightbox-left">
+                <!-- Loading overlay -->
+                <div id="lightbox-loading" class="lightbox-loading">
+                    <div class="lightbox-loading-spinner"></div>
+                    <div class="lightbox-loading-text">Loading HQ Image...</div>
+                </div>
+                <!-- Clean image area - no overlays -->
+                <img id="lightbox-image" class="lightbox-image loading" src="" alt="">
+            </div>
+            <div class="lightbox-right">
+                <div class="lightbox-details" id="lightbox-details">
+                    <!-- Populated dynamically with navigation in header -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Gallery Data -->
+    <script>
+        window.GALLERY_DATA = [
+  {
+    "filename": "25-45-yo-busy-profes__unleash-pe__premium-sc__gen_20251028_125944_01.png",
+    "thumbnail": "25-45-yo-busy-profes__unleash-pe__premium-sc__gen_20251028_125944_01_thumb.jpg",
+    "fbCopy": "Dominate your work sprint with a bite-sized brain boost. Dynamind IQ’s chocolate soft chews deliver focus, steady energy, and immune support—no water needed. Power your pocket.",
+    "tags": [
+      "Unleash",
+      "peak",
+      "mental performance",
+      "Cognatiq",
+      "+",
+      "mushrooms",
+      "caffeine",
+      "Focus &",
+      "energy",
+      "no water",
+      "juggling",
+      "super busy",
+      "overworked",
+      "balancing",
+      "hectic",
+      "time-starved",
+      "swamped",
+      "very busy",
+      "extremely busy",
+      "multitasker",
+      "constantly busy",
+      "no free time",
+      "hurried",
+      "on-the-go",
+      "time-constrained",
+      "multitasking",
+      "busy",
+      "rushing",
+      "always busy",
+      "packed schedule",
+      "busy professionals",
+      "25-45 age range",
+      "unisex audience",
+      "modern aesthetic",
+      "warm tones",
+      "premium design",
+      "cognitive fatigue relief",
+      "sustained mental energy",
+      "brain health support",
+      "productivity boost",
+      "conversion focused campaign",
+      "woman",
+      "female",
+      "25-35 years",
+      "professional woman",
+      "business casual",
+      "beige blouse",
+      "ponytail hairstyle",
+      "focused expression",
+      "working on laptop",
+      "office setting",
+      "desk workspace",
+      "Dynamind IQ",
+      "Chews Health",
+      "cognitive support",
+      "brain health",
+      "energy chews",
+      "chocolate flavor",
+      "pocket-ready",
+      "functional mushrooms",
+      "product packaging",
+      "blue packaging",
+      "\"Unleashe peak mental performance\"",
+      "\"Focus & energy no water\"",
+      "notebook",
+      "tablet device",
+      "charts on screen",
+      "coffee cup",
+      "window light",
+      "natural light",
+      "soft lighting",
+      "clean design",
+      "premium product",
+      "available on Amazon",
+      "30 chews",
+      "NET WT. 102g (3.6oz)",
+      "chew in hand",
+      "eating chew",
+      "snack",
+      "brain boost",
+      "focus supplement",
+      "energy supplement",
+      "workspace",
+      "professional setting",
+      "corporate environment"
+    ],
+    "job": {
+      "persona": {
+        "slug": "25-45-yo-busy-professionals-knowledge-workers",
+        "full_name": "25-45 yo Busy professionals & knowledge workers",
+        "target": "Demanding meetings, project sprints, multitasking, high-output days, peak performance moments",
+        "primary_pain_point": "Difficulty maintaining sustained mental focus and steady energy throughout long workdays and multiple tasks",
+        "value_proposition": "Premium, science-backed soft chews delivering clear, consistent cognitive support, immune wellness, and jitter-free energy in a convenient, on-the-go format to power peak productivity"
+      },
+      "hook": {
+        "slug": "unleash-peak-mental-performanceno-water-needed-just-a-delicious-chocolate-chew-for-focus-energy-and-brain-health-on-your-busiest-days",
+        "full_text": "Unleash peak mental performance—no water needed, just a delicious chocolate chew for focus, energy, and brain health on your busiest days"
+      },
+      "style": {
+        "slug": "premium-scientific-lifestyle-style",
+        "full_name": "Premium Scientific Lifestyle Style",
+        "palette": "Warm sophisticated tones with natural hues including deep chocolate browns, soft beige, muted greens, and clean white accents for premium and approachable feel.",
+        "visual_cues": "Authentic lifestyle contexts capturing busy professionals, gamers, students, and wellness enthusiasts in real settings (office desks, gaming setups, study nooks, gym bags). Close-ups highlight the soft chew texture and rich chocolate appearance, with visible transparent packaging showing per-chew dosing and ingredient labels. Pocket-ready packaging featured in grab-and-go, commute, and travel scenarios, emphasizing convenience and no-water-needed use. Balanced lighting using warm natural and soft studio lights to convey a premium but accessible atmosphere. Scientific storytelling integrated with approachable educational overlays on ingredients (Cognatiq, mushrooms, caffeine). Shots demonstrate sustained energy and focus in action with relatable daily routines.",
+        "notes": "This style unifies sophistication and credibility with relatability and sensory appeal. It embraces a science-backed narrative and premium positioning while making the product feel accessible and integral to busy, cognitive-demanding lifestyles. The focus is on showing the product’s taste, texture, clear benefits, and convenience with consistent Chews Health branding and Dynamind IQ emphasis."
+      },
+      "generation": {
+        "timestamp": "2025-10-28T13:00:06.454715Z",
+        "filename": "25-45-yo-busy-profes__unleash-pe__premium-sc__gen_20251028_125944_01.png"
+      }
+    },
+    "prompt": "Facebook ad 1:1 aspect. Campaign style variant: Premium Scientific Lifestyle Style.  \nStyle Palette: Warm sophisticated tones with natural hues including deep chocolate browns, soft beige, muted greens, and clean white accents for premium and approachable feel.  \nStyle Cues: Authentic lifestyle contexts capturing busy professionals at modern office desks with laptops and notebooks, mid-meeting or multitasking. Close-ups highlight the soft chew’s rich chocolate texture, glossy finish, and transparent packaging showing clear per-chew dosing and labeled ingredients. Pocket-ready packaging featured in a sleek blazer pocket and on a commute via subway or city street, emphasizing grab-and-go convenience. Balanced warm natural light plus soft studio highlights convey premium yet accessible tone. Visual overlays integrate clean, approachable infographics on Cognatiq, functional mushrooms, and caffeine benefits. Scenes show sustained mental focus: working intensely, reviewing data, typing quickly, and checking checklists.  \nStyle Notes: Sophistication and credibility meet relatability and sensory appeal. The product’s premium ingredients, taste, and clear benefits are front and center with authentic Chews Health branding and Dynamind IQ packaging. The design anchors copy directly to product and usage context with strong bold sans-serif typography for hooks and medium font weight for support.  \n\nTop Headline (bold, sans-serif): [\"Unleash\",\"peak\",\"mental performance\"]  \n\nVisual Structure:  \n- Primary Scene: Busy professional intensely focused in a bright, organized office during a high-output work sprint, multi-tasking with computer and notes visible.  \n- Product Placement: Dynamind IQ chocolate-flavored soft chew pack positioned prominently on the desk next to a laptop, package open showing chews, one chew held visually close to camera near the user’s hand.  \n- Product Detail: Close-up on one glossy, smooth-textured chocolate chew with visible surface detail, alongside clear, clean, transparent child-resistant package showing per-chew breakdown of Cognatiq, mushrooms, caffeine.  \n- Visual Harmony: Headline text anchored near user’s face to express focus; overlay texts near the chew and packaging for clarity; warm shadows and highlights lead eyes around the composition seamlessly.  \n\nOverlay Text (max 3 elements):  \n1. [\"Unleash\",\"peak\",\"mental performance\"]  \n2. [\"Cognatiq\",\"+\",\"mushrooms\",\"+\",\"caffeine\"]  \n3. [\"Focus &\",\"energy\",\"no water\"]  \n\nFooter / End Card:  \n- Brand logo in sleek white strip across bottom.  \n\nPalette & Style:  \n- Background: soft beige with deep chocolate brown accents; muted green gradient bar behind text overlays for contrast.  \n- Typography: Bold sans-serif in dark chocolate brown for headline and CTA, medium weight for proof elements in soft beige.\n\n# Overlay Directives (append at the very end)\nREQUIRED ALWAYS:\nMust Always include \"Available on Amazon\" official Amazon tag\nMust Always include \"Chews Health\" official Logo from the references\nMust Always include \"Dynamind IQ Product image\" from the references"
+  }
+];
+        window.PROJECT_NAME = "Dyanmind-Test-Celery";
+        window.RUN_INFO = "Generated with 1 personas × 1 hooks × 1 styles × 1 samples";
+        window.JOB_DATA = {
+  "timestamp": "20251028_125934",
+  "timestamp_iso": "2025-10-28T12:59:34.157973Z",
+  "project_name": "output",
+  "generation_params": {
+    "n_personas": 1,
+    "hooks_per_persona": 1,
+    "n_styles": 1,
+    "max_text_blocks": 3,
+    "samples": 1,
+    "n_scenes": 0,
+    "ad_format": "Facebook ad 1:1 aspect",
+    "aspect_ratio": "1:1",
+    "do_upscale": false,
+    "ad_copy_enabled": true,
+    "use_nooverlays_mode": false
+  },
+  "personas": [
+    {
+      "persona": "25-45 yo Busy professionals & knowledge workers",
+      "target": "Demanding meetings, project sprints, multitasking, high-output days, peak performance moments",
+      "primary_pain_point": "Difficulty maintaining sustained mental focus and steady energy throughout long workdays and multiple tasks",
+      "value_proposition": "Premium, science-backed soft chews delivering clear, consistent cognitive support, immune wellness, and jitter-free energy in a convenient, on-the-go format to power peak productivity",
+      "hooks": [
+        "Unleash peak mental performance—no water needed, just a delicious chocolate chew for focus, energy, and brain health on your busiest days"
+      ]
+    }
+  ],
+  "styles": [
+    {
+      "name": "Premium Scientific Lifestyle Style",
+      "palette": "Warm sophisticated tones with natural hues including deep chocolate browns, soft beige, muted greens, and clean white accents for premium and approachable feel.",
+      "visual_cues": "Authentic lifestyle contexts capturing busy professionals, gamers, students, and wellness enthusiasts in real settings (office desks, gaming setups, study nooks, gym bags). Close-ups highlight the soft chew texture and rich chocolate appearance, with visible transparent packaging showing per-chew dosing and ingredient labels. Pocket-ready packaging featured in grab-and-go, commute, and travel scenarios, emphasizing convenience and no-water-needed use. Balanced lighting using warm natural and soft studio lights to convey a premium but accessible atmosphere. Scientific storytelling integrated with approachable educational overlays on ingredients (Cognatiq, mushrooms, caffeine). Shots demonstrate sustained energy and focus in action with relatable daily routines.",
+      "notes": "This style unifies sophistication and credibility with relatability and sensory appeal. It embraces a science-backed narrative and premium positioning while making the product feel accessible and integral to busy, cognitive-demanding lifestyles. The focus is on showing the product’s taste, texture, clear benefits, and convenience with consistent Chews Health branding and Dynamind IQ emphasis."
+    }
+  ],
+  "files": {
+    "brand_file": "jobs/dyanmind-test-celery/brand.txt",
+    "personas_file": "jobs/dyanmind-test-celery/personas.txt",
+    "styles_file": "jobs/dyanmind-test-celery/styles.txt",
+    "negative_file": "jobs/dyanmind-test-celery/negative.txt",
+    "overlays_file": "jobs/dyanmind-test-celery/overlays.txt"
+  },
+  "config_files": {
+    "brand": "Brand context: Dynamind IQ by Chews Health - Premium chocolate-flavored soft chews for cognitive support, brain health, and sustained energy. Each chew delivers targeted ingredients: Cognatiq (cognitive support), functional mushrooms (immune support & wellness), and caffeine (steady energy without jitters). Pocket-ready format designed for busy professionals, students, gamers, and wellness enthusiasts aged 25-55.\n\nProduct Differentiators:\n- Soft chew format (no water needed) vs competitors' pills or poor-quality chews\n- Premium chocolate flavor with smooth texture, no harsh aftertaste\n- Clear per-chew dosing for all ingredients\n- Portable, pocket-friendly packaging\n- Science-backed ingredients with transparent labeling\n- Supports focus, sustained energy, and overall cognitive wellness\n\nPositioning: \"Focus in a Bite. Power in Your Pocket.\" - Premium brain-boost convenience for on-the-go lifestyles.\n\nTarget Personas (Primary):\n1. Gamers & eSports athletes (sustained focus, quick reactions, long sessions)\n2. Students & exam-period learners (concentration, memory, late-night study)\n3. Busy professionals & knowledge workers (meetings, project sprints, multitasking)\n4. Health-conscious aging adults (cognitive vitality, wellness focus)\n5. Busy moms & caregivers (multitasking, quick mental focus)\n6. Creative professionals & designers (creative flow, sustained attention)\n\nKey Messaging:\n- \"Daily cognitive boost you can actually enjoy\"\n- \"Smart, premium support for your busy brain\"\n- \"Brain health, immune support, and steady energy in one chewy bite\"\n- No water required, fits any routine, anywhere, anytime\n- Consistent taste and texture with straightforward dosing\n\nProof Points:\n- Cognatiq: targeted cognitive support\n- Functional mushrooms: immune support and overall wellness\n- Caffeine: steady, sustained energy\n- Premium ingredients with transparent per-chew amounts\n- Chocolate flavor with soft chew texture\n- Compact, pocket-ready packaging\n\nCompetitors: Force Factor (poor quality chews), Humana (chews), Neuriva (pills), Cerefolin (pills), energy drinks\n\nBrand Voice & Style: Sophisticated, credible, yet approachable; scientific but easy-to-understand; premium positioning with authentic, relatable content.\n\nPrice: [ADD PRICING]\nOffer: 30% discount with sample bags\n\nREQUIRED ALWAYS:\nMust Always include Chews Health branding\nMust Always include \"Dynamind IQ\" product name\nMust Always include Product packaging/chew images from the references\nMust Always show pocket-ready convenience and on-the-go usage scenarios\n",
+    "personas": "25-35 yo Gamers & eSports athletes (sustained focus, quick reactions, long sessions, late-night streams, delayed fatigue, sharper reactions)\n25-45 yo Students & exam-period learners (concentration, memory, late-night study, cognitive endurance, lectures to study sessions)\n28-50 yo Busy professionals & knowledge workers (demanding meetings, project sprints, multitasking, high-output days, peak performance moments)\n35-55 yo Health-conscious aging adults (cognitive vitality, mental sharpness, wellness routines, lasting brain health, daily activities)\n30-50 yo Busy moms & caregivers (multitasking, quick mental focus, juggling tasks, morning routines, busy day energy)\n25-45 yo Creative professionals & designers (creative flow, sustained attention, sketching sessions, whiteboard work, craft workflows)\n",
+    "styles": "Chews Health Brand Guidelines: Values=Trust, Science-backed, Premium, Convenience; Voice=Sophisticated, credible, approachable, easy-to-understand; Colors=Warm, sophisticated tones with clean premium aesthetics; Typography=Modern sans-serif for clarity, premium feeling; Imagery=Authentic lifestyle contexts (office, study, gym, gaming), warm natural lighting, clean visuals, product-focused with clear packaging visibility; Logo=Chews Health + Dynamind IQ branding, high-contrast, premium positioning; Content=Focus on sensory experience (chocolate flavor, soft texture), cognitive benefits, on-the-go convenience, science-backed claims with accessible language; Overall=A premium, trustworthy brand that delivers cognitive support through convenient, enjoyable chews.\n\nPremium Wellness Style: Clean, modern aesthetic with warm lighting; focus on lifestyle integration (desk, study sessions, gym); authentic product demonstrations; close-ups of chew texture and chocolate appearance; pocket-friendly packaging visibility; emphasis on convenience and premium quality; sophisticated color palette with natural tones.\n\nScience-Backed Credibility Style: Educational tone with clear ingredient storytelling (Cognatiq, mushrooms, caffeine); per-chew dosing visibility; transparent labeling shots; before/during/after usage scenarios; authentic testimonial feel; professional yet approachable; emphasis on cognitive support and focus benefits; compliance-friendly language.\n\nActive Lifestyle Style: Dynamic shots in gaming setups, study environments, professional workspaces; quick-access moments (pocket to hand); energy and focus in action; multi-context usage (office, library, gym, home); emphasis on sustained performance; warm, energetic lighting; authentic daily routines.\n\nPocket-Ready Convenience Style: Close-ups of portable packaging; desk drawer, pocket, gym bag contexts; no-water-needed demonstrations; quick grab-and-go moments; travel and commute scenarios; compact design visibility; emphasis on \"fits anywhere, anytime\" messaging.\n\nPremium Product Focus Style: Hero shots of chew with chocolate texture visible; packaging design showcase; ingredient list and dosing clarity; sensory appeal (taste, texture); premium quality cues; clean backgrounds with product as hero; warm lighting to emphasize chocolate richness.\n\nAuthentic Review Style: Real user experiences in natural settings; taste test reactions; daily routine integration; honest benefit communication (focus, energy, wellness); before/after cognitive task scenarios; relatable professional, student, or gamer contexts; emphasis on enjoyable taste and effective results.\n",
+    "overlays": "REQUIRED ALWAYS:\nMust Always include \"Available on Amazon\" official Amazon tag\nMust Always include \"Chews Health\" official Logo from the references\nMust Always include \"Dynamind IQ Product image\" from the references\n",
+    "negative": "# negative.txt not available"
+  }
+};
+    </script>
+    
+    <!-- Gallery Script -->
+    <script src="gallery_script.js?v=1761656406514"></script>
+</body>
+</html>

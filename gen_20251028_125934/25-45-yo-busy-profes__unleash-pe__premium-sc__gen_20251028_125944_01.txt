@@ -1,0 +1,30 @@
+Facebook ad 1:1 aspect. Campaign style variant: Premium Scientific Lifestyle Style.  
+Style Palette: Warm sophisticated tones with natural hues including deep chocolate browns, soft beige, muted greens, and clean white accents for premium and approachable feel.  
+Style Cues: Authentic lifestyle contexts capturing busy professionals at modern office desks with laptops and notebooks, mid-meeting or multitasking. Close-ups highlight the soft chew’s rich chocolate texture, glossy finish, and transparent packaging showing clear per-chew dosing and labeled ingredients. Pocket-ready packaging featured in a sleek blazer pocket and on a commute via subway or city street, emphasizing grab-and-go convenience. Balanced warm natural light plus soft studio highlights convey premium yet accessible tone. Visual overlays integrate clean, approachable infographics on Cognatiq, functional mushrooms, and caffeine benefits. Scenes show sustained mental focus: working intensely, reviewing data, typing quickly, and checking checklists.  
+Style Notes: Sophistication and credibility meet relatability and sensory appeal. The product’s premium ingredients, taste, and clear benefits are front and center with authentic Chews Health branding and Dynamind IQ packaging. The design anchors copy directly to product and usage context with strong bold sans-serif typography for hooks and medium font weight for support.  
+
+Top Headline (bold, sans-serif): ["Unleash","peak","mental performance"]  
+
+Visual Structure:  
+- Primary Scene: Busy professional intensely focused in a bright, organized office during a high-output work sprint, multi-tasking with computer and notes visible.  
+- Product Placement: Dynamind IQ chocolate-flavored soft chew pack positioned prominently on the desk next to a laptop, package open showing chews, one chew held visually close to camera near the user’s hand.  
+- Product Detail: Close-up on one glossy, smooth-textured chocolate chew with visible surface detail, alongside clear, clean, transparent child-resistant package showing per-chew breakdown of Cognatiq, mushrooms, caffeine.  
+- Visual Harmony: Headline text anchored near user’s face to express focus; overlay texts near the chew and packaging for clarity; warm shadows and highlights lead eyes around the composition seamlessly.  
+
+Overlay Text (max 3 elements):  
+1. ["Unleash","peak","mental performance"]  
+2. ["Cognatiq","+","mushrooms","+","caffeine"]  
+3. ["Focus &","energy","no water"]  
+
+Footer / End Card:  
+- Brand logo in sleek white strip across bottom.  
+
+Palette & Style:  
+- Background: soft beige with deep chocolate brown accents; muted green gradient bar behind text overlays for contrast.  
+- Typography: Bold sans-serif in dark chocolate brown for headline and CTA, medium weight for proof elements in soft beige.
+
+# Overlay Directives (append at the very end)
+REQUIRED ALWAYS:
+Must Always include "Available on Amazon" official Amazon tag
+Must Always include "Chews Health" official Logo from the references
+Must Always include "Dynamind IQ Product image" from the references
