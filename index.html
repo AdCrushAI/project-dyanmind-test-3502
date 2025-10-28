@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dyanmind-Test-Celery - AdCrush Decks</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --bg: #0f1419;
+            --bg-secondary: #1a1f2e;
+            --card-bg: #252d3d;
+            --text: #e5e7eb;
+            --text-light: #9ca3af;
+            --border: #374151;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+        }
+        
+        .title-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            height: 56px;
+        }
+        
+        .title-bar-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .title-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        
+        .title-logo .material-icons {
+            color: var(--primary);
+            font-size: 1.75rem;
+        }
+        
+        main {
+            margin-top: 56px;
+            padding: 3rem 2rem;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary) 0%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            color: var(--text-light);
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Controls Bar */
+        .controls-bar {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .control-group {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+        
+        .control-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+        }
+        
+        .control-btn:hover {
+            border-color: var(--primary);
+            background: var(--bg-secondary);
+        }
+        
+        .control-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        
+        .control-btn .material-icons {
+            font-size: 1.125rem;
+        }
+        
+        /* Grid View */
+        .batches-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        /* List View */
+        .batches-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .batches-list .batch-card {
+            display: flex;
+            flex-direction: row;
+            height: auto;
+        }
+        
+        .batches-list .batch-thumbnail {
+            width: 200px;
+            height: 150px;
+            flex-shrink: 0;
+        }
+        
+        .batches-list .batch-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .batches-list .batch-stats {
+            margin-top: 0.5rem;
+        }
+        
+        .batch-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .batch-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(99, 102, 241, 0.2);
+            border-color: var(--primary);
+        }
+        
+        .batch-thumbnail {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: var(--bg-secondary);
+        }
+        
+        .batch-info {
+            padding: 1.5rem;
+        }
+        
+        .batch-date {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .batch-date .material-icons {
+            font-size: 1rem;
+        }
+        
+        .batch-stats {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .batch-stat {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+        
+        .batch-stat .material-icons {
+            font-size: 1.125rem;
+            color: var(--primary);
+        }
+        
+        .batch-stat strong {
+            color: var(--text);
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-light);
+        }
+        
+        .empty-state .material-icons {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="title-bar">
+        <div class="title-bar-content">
+            <a href="https://adcrush.ai" target="_blank" rel="noopener noreferrer" class="title-logo">
+                <span class="material-icons">bolt</span>
+                <span>AdCrush</span>
+            </a>
+        </div>
+    </div>
+    
+    <main>
+        <div class="container">
+            <h1>Dyanmind-Test-Celery</h1>
+            <p class="subtitle">AdCrush Decks</p>
+            
+            <div class="controls-bar" id="controlsBar">
+                <div class="control-group">
+                    <button class="control-btn active" id="sortNewest" onclick="sortBatches('newest')">
+                        <span class="material-icons">arrow_downward</span>
+                        Newest First
+                    </button>
+                    <button class="control-btn" id="sortOldest" onclick="sortBatches('oldest')">
+                        <span class="material-icons">arrow_upward</span>
+                        Oldest First
+                    </button>
+                </div>
+                <div class="control-group">
+                    <button class="control-btn active" id="viewGrid" onclick="setView('grid')">
+                        <span class="material-icons">grid_view</span>
+                        Card View
+                    </button>
+                    <button class="control-btn" id="viewList" onclick="setView('list')">
+                        <span class="material-icons">view_list</span>
+                        List View
+                    </button>
+                </div>
+            </div>
+            
+            <div class="batches-grid" id="batchesContainer">
+                <!-- Batches will be rendered here by JavaScript -->
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        // Batch data from Python
+        const batchData = [{"folder": "gen_20251028_120314", "date": "2025-10-28T12:03:14", "dateFormatted": "October 28, 2025 at 12:03 PM", "numAds": 1, "thumbnail": "gen_20251028_120314/25-45-yo-busy-profes__unleash-pe__premium-sc__gen_20251028_120326_01.png"}, {"folder": "gen_20251028_120203", "date": "2025-10-28T12:02:03", "dateFormatted": "October 28, 2025 at 12:02 PM", "numAds": 0, "thumbnail": ""}, {"folder": "gen_20251028_115721", "date": "2025-10-28T11:57:21", "dateFormatted": "October 28, 2025 at 11:57 AM", "numAds": 0, "thumbnail": ""}, {"folder": "gen_20251028_115627", "date": "2025-10-28T11:56:27", "dateFormatted": "October 28, 2025 at 11:56 AM", "numAds": 0, "thumbnail": ""}, {"folder": "gen_20251028_115310", "date": "2025-10-28T11:53:10", "dateFormatted": "October 28, 2025 at 11:53 AM", "numAds": 0, "thumbnail": ""}];
+        let currentSort = 'newest';
+        let currentView = 'grid';
+        
+        // Render batches
+        function renderBatches() {
+            const container = document.getElementById('batchesContainer');
+            
+            if (batchData.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <span class="material-icons">folder_open</span>
+                        <p>No decks found. Generate your first ad deck to see it here!</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Sort batches
+            const sorted = [...batchData].sort((a, b) => {
+                const dateA = new Date(a.date);
+                const dateB = new Date(b.date);
+                return currentSort === 'newest' ? dateB - dateA : dateA - dateB;
+            });
+            
+            // Set view class
+            container.className = currentView === 'grid' ? 'batches-grid' : 'batches-list';
+            
+            // Render cards
+            container.innerHTML = sorted.map(batch => `
+                <a href="${batch.folder}/index.html" class="batch-card">
+                    <img src="${batch.thumbnail}" alt="Batch preview" class="batch-thumbnail">
+                    <div class="batch-info">
+                        <div class="batch-date">
+                            <span class="material-icons">schedule</span>
+                            ${batch.dateFormatted}
+                        </div>
+                        <div class="batch-stats">
+                            <div class="batch-stat">
+                                <span class="material-icons">image</span>
+                                <strong>${batch.numAds}</strong> ads
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            `).join('');
+        }
+        
+        // Sort control
+        function sortBatches(sort) {
+            currentSort = sort;
+            
+            // Update button states
+            document.getElementById('sortNewest').classList.toggle('active', sort === 'newest');
+            document.getElementById('sortOldest').classList.toggle('active', sort === 'oldest');
+            
+            renderBatches();
+        }
+        
+        // View control
+        function setView(view) {
+            currentView = view;
+            
+            // Update button states
+            document.getElementById('viewGrid').classList.toggle('active', view === 'grid');
+            document.getElementById('viewList').classList.toggle('active', view === 'list');
+            
+            renderBatches();
+        }
+        
+        // Initial render
+        renderBatches();
+    </script>
+</body>
+</html>
