@@ -1,0 +1,83 @@
+{
+  "FacebookAd": {
+    "aspectRatio": "1:1",
+    "campaignStyleVariant": "Improves memory and focus",
+    "stylePalette": {
+      "primaryColors": [
+        "Clean whites",
+        "light grays"
+      ],
+      "accents": [
+        "soft golds",
+        "muted browns"
+      ],
+      "highlights": [
+        "modern blue",
+        "teal"
+      ]
+    },
+    "styleCues": [
+      "Ingredient storytelling visuals highlighting Cognatiq, functional mushrooms, caffeine",
+      "transparent labeling close-ups with clear per-chew dosing",
+      "infographic style or stepwise patterns for cognitive support and energy benefits",
+      "professional but approachable aesthetic with easy-to-understand scientific content",
+      "before/during/after usage scenarios",
+      "testimonial authenticity and compliance-conscious language"
+    ],
+    "styleNotes": "Targets trust and transparency through educational content, making complex ingredients accessible and credible. Reinforces the brand’s science-backed foundation while maintaining approachability and ease of understanding.",
+    "topHeadline": [
+      "Improves",
+      "memory and",
+      "focus without",
+      "crash"
+    ],
+    "visualStructure": {
+      "primaryScene": "Student studying late-night with open books and laptop, showing subtle tiredness but focused; warm desk lamp with cool ambient blue light to convey science and calm focus.",
+      "productPlacement": "Dynamind IQ package front and center on desk, pocket-ready pouch visible alongside 2 soft chocolate chews partially unwrapped to reveal smooth texture.",
+      "productDetail": "Close-up inset of chew with transparent label overlays showing clear per-chew dosing of Cognatiq, functional mushrooms, and caffeine.",
+      "visualHarmony": "Text anchored along book edges and near product package; infographic callouts subtly integrated into background.",
+      "textOverlayLegibility": "Text overlays large and crisp for social feed legibility."
+    },
+    "overlayText": [
+      [
+        "Improves",
+        "memory and",
+        "focus"
+      ],
+      [
+        "Study",
+        "smarter",
+        "anytime"
+      ],
+      [
+        "Focus in",
+        "a Bite",
+        "Power in",
+        "Your Pocket"
+      ]
+    ],
+    "footerEndCard": {
+      "brandLogo": "Chews Health",
+      "position": "bottom strip aligned left"
+    },
+    "paletteAndStyle": {
+      "background": "soft white with light gray gradient",
+      "accentShapes": [
+        "soft gold",
+        "muted brown"
+      ],
+      "highlightLines": "Blue/teal highlight lines used in ingredient close-up callouts",
+      "fontStyles": {
+        "headlineAndOverlays": "Bold sans-serif",
+        "secondaryText": "medium weight"
+      }
+    },
+    "overlayDirectives": {
+      "requiredAlways": [
+        "Must Always include \"Available on Amazon\" official Amazon tag",
+        "Must Always include \"Chews Health\" official Logo from the references",
+        "Must Always include \"Dynamind IQ Product image\" from the references"
+      ]
+    }
+  }
+}

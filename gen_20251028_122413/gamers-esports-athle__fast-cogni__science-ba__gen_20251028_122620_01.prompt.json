@@ -1,0 +1,63 @@
+{
+  "facebook_ad": {
+    "aspect_ratio": "1:1",
+    "campaign_style_variant": "Sustained focus for long sessions",
+    "style_palette": {
+      "primary_colors": [
+        "clean whites",
+        "light grays"
+      ],
+      "accent_colors": [
+        "soft golds",
+        "muted browns"
+      ],
+      "highlight_colors": [
+        "modern blue",
+        "teal"
+      ],
+      "purpose": "clinical clarity, imply science and trust"
+    },
+    "style_cues": [
+      "Ingredient storytelling visuals highlighting Cognatiq, functional mushrooms, caffeine",
+      "transparent labeling close-ups with clear per-chew dosing",
+      "infographic style or stepwise patterns for cognitive support and energy benefits",
+      "professional but approachable aesthetic with easy-to-understand scientific content",
+      "before/during/after usage scenarios",
+      "testimonial authenticity and compliance-conscious language"
+    ],
+    "style_notes": "Targets trust and transparency through educational content, making complex ingredients accessible and credible. Reinforces the brand’s science-backed foundation while maintaining approachability and ease of understanding.",
+    "top_headline": [
+      "Sustained",
+      "focus for",
+      "long sessions"
+    ],
+    "visual_structure": {
+      "primary_scene": "Male gamer aged 25-35 intensely focused on a gaming screen, subtle cool blue tones on his face, room dimly lit with gaming setup visible showing headset and keyboard, conveying fatigue but sharp concentration after hours of play.",
+      "product_placement": "Dynamind IQ premium chocolate-flavored soft chews package front and center on desk beside keyboard, crisply lit to highlight sleek pocket-ready pouch design with authentic branding and product name.",
+      "product_detail": "A close-up insert of one chew held between fingers, showing smooth texture and chocolate tone; scientific transparent label overlay next to it showing per-chew dosing of Cognatiq, mushrooms, and caffeine in infographics style.",
+      "visual_harmony": "Text overlays anchored to visual elements—headline near gamer’s focused eyes; proof text near product pouch; CTA near close-up chew image, all using bold sans-serif with clean white and teal backgrounds for clarity."
+    },
+    "overlay_text": [
+      [
+        "Sustained",
+        "focus for",
+        "long sessions"
+      ],
+      [
+        "Cognition",
+        "energy",
+        "immune support"
+      ],
+      [
+        "Try",
+        "30% off",
+        "sample packs"
+      ]
+    ],
+    "overlay_directives": [
+      "Must Always include \"Available on Amazon\" official Amazon tag",
+      "Must Always include \"Chews Health\" official Logo from the references",
+      "Must Always include \"Dynamind IQ Product image\" from the references"
+    ]
+  }
+}

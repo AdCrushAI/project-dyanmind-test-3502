@@ -1,0 +1,74 @@
+{
+  "ad_format": "Facebook ad 1:1 aspect",
+  "campaign_style_variant": [
+    "Science-Backed Credibility",
+    "Educational Style"
+  ],
+  "top_headline": {
+    "text": [
+      "Improves",
+      "memory and",
+      "focus"
+    ],
+    "style": {
+      "font_weight": "bold",
+      "font_family": "sans-serif"
+    },
+    "position": "anchored above the student's focused gaze"
+  },
+  "visual_structure": {
+    "primary_scene": "A focused student at a spotless desk surrounded by textbooks and a laptop, studying late-night under a cool white desk lamp, eyes steady and engaged.",
+    "product_placement": "Dynamind IQ premium chocolate-flavored soft chew pouch front and center on the desk within easy reach.",
+    "product_detail": "A single chocolate chew pulled from the pouch clearly showing smooth texture, alongside an infographic callout of Cognatiq, mushrooms, and caffeine dosages with transparent labels.",
+    "visual_harmony": "The [\"Improves\",\"memory and\",\"focus\"] headline is anchored above the student’s focused gaze."
+  },
+  "overlay_text": [
+    [
+      "Improves",
+      "memory and",
+      "focus"
+    ],
+    [
+      "Science-backed",
+      "clear dosing"
+    ],
+    [
+      "Sustain",
+      "study power",
+      "anytime"
+    ]
+  ],
+  "footer_end_card": {
+    "brand_logo": {
+      "position": "bottom strip left-aligned"
+    },
+    "tagline": [
+      "Focus in",
+      "a Bite",
+      "Power in",
+      "Your Pocket"
+    ],
+    "tagline_format": "in quotes"
+  },
+  "palette_style": {
+    "background": "clean white with subtle soft gold and muted brown accents on desk items and lighting warmth",
+    "callouts": "modern teal callouts highlight ingredient info boxes",
+    "text_font": {
+      "font_family": "sans-serif",
+      "font_weight": "medium",
+      "usage": "for supporting text"
+    }
+  },
+  "rules": [
+    "Authentic Dynamind IQ pouch and chocolate chew exactly as referenced.",
+    "Text anchored logically with the scene’s elements.",
+    "Brand logo and tagline fixed in consistent bottom stripe.",
+    "Persona-focused study environment and headline.",
+    "Product chew and pouch crisply centered and prominent."
+  ],
+  "overlay_directives": [
+    "Must Always include \"Available on Amazon\" official Amazon tag",
+    "Must Always include \"Chews Health\" official Logo from the references",
+    "Must Always include \"Dynamind IQ Product image\" from the references"
+  ]
+}

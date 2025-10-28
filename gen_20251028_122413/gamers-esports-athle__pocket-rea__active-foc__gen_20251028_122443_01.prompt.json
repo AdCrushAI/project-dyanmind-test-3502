@@ -1,0 +1,125 @@
+{
+  "ad_format": "Facebook ad 1:1 aspect",
+  "campaign_style_variant": "Active Focus & Lifestyle Performance Style",
+  "style_palette": "Warm energizing tones like amber and burnt orange combined with natural browns and soft neutrals; balanced with deep chocolate and charcoal accents.",
+  "style_cues": [
+    "Dynamic lifestyle shots in real environments: gaming setups, professional meetings, study sessions, gym",
+    "moments capturing quick grab-and-go energy boosts",
+    "close-ups on focused facial expressions and product in hand",
+    "authentic daily routines emphasizing sustained energy and cognitive support",
+    "vibrant warm energetic lighting to evoke mental clarity and motivation"
+  ],
+  "style_notes": "Highlights product performance in action for target users requiring sustained focus and mental energy. Emphasizes vibrant everyday life integration with a sophisticated yet approachable tone.",
+  "top_headline": {
+    "text": [
+      "Sustained",
+      "focus",
+      "for long",
+      "play"
+    ],
+    "style": "bold, sans-serif"
+  },
+  "visual_structure": {
+    "primary_scene": {
+      "description": [
+        "A focused",
+        "25-35-year-old",
+        "gamer",
+        "in mid-game",
+        "at a",
+        "modern",
+        "gaming setup",
+        "illuminated",
+        "with warm",
+        "amber lighting"
+      ],
+      "expression_action": [
+        "showing",
+        "concentration",
+        "and quick",
+        "reflexes"
+      ]
+    },
+    "product_placement": [
+      "Dynamind IQ",
+      "chews",
+      "and packaging",
+      "prominently",
+      "positioned",
+      "near the",
+      "keyboard"
+    ],
+    "product_hand_action": [
+      "hand holding",
+      "a single",
+      "chocolate chew",
+      "ready",
+      "to consume"
+    ],
+    "product_detail": [
+      "Close-up",
+      "of one",
+      "chew",
+      "with visible",
+      "smooth texture",
+      "and clear",
+      "packaging labeling",
+      "showing",
+      "Cognatiq",
+      "and mushroom",
+      "icons"
+    ],
+    "visual_harmony": [
+      "Top headline",
+      "anchored",
+      "to the",
+      "gamer’s intense",
+      "gaze"
+    ],
+    "additional_text_overlays": [
+      "Science-backed",
+      "steady energy",
+      "text overlay",
+      "near the",
+      "product close-up"
+    ],
+    "phrase_association": [
+      "Power",
+      "in your",
+      "pocket",
+      "phrase aligned",
+      "with the",
+      "pocket-ready",
+      "pouch",
+      "held subtly",
+      "in the",
+      "gamer’s jeans",
+      "pocket"
+    ],
+    "text_requirements": "Text overlays must be large and readable in social feeds"
+  },
+  "overlay_text": [
+    [
+      "Sustained",
+      "focus",
+      "for long",
+      "play"
+    ],
+    [
+      "Science-backed",
+      "steady energy"
+    ],
+    [
+      "Power",
+      "in your",
+      "pocket"
+    ]
+  ],
+  "overlay_directives": {
+    "required_always": [
+      "Must Always include \"Available on Amazon\" official Amazon tag",
+      "Must Always include \"Chews Health\" official Logo from the references",
+      "Must Always include \"Dynamind IQ Product image\" from the references"
+    ]
+  }
+}

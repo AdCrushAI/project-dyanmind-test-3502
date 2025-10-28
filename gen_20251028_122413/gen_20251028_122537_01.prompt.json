@@ -1,0 +1,59 @@
+{
+  "FacebookAd": {
+    "AspectRatio": "1:1",
+    "CampaignStyleVariant": "Premium Wellness & Convenience Style",
+    "StylePalette": [
+      "Warm, sophisticated natural tones",
+      "rich chocolate browns",
+      "clean whites and soft neutrals",
+      "accent with subtle gold or bronze for premium feel"
+    ],
+    "StyleCues": [
+      "Authentic lifestyle imagery integrating gaming setups with warm natural lighting",
+      "close-up of Dynamind IQ premium chocolate chews and packaging prominently displayed on a sleek gaming desk",
+      "gamer reaching into pocket-ready pouch mid-session",
+      "soft lighting emphasizing rich chocolate texture and premium packaging",
+      "demonstration of no water needed—chewing directly during play"
+    ],
+    "StyleNotes": "Combines immersive gaming lifestyle with pocket-ready convenience messaging; showcases seamless on-the-go usage for gamers requiring sustained focus and energy; tactile premium sensory experience (smooth chocolate chew) highlighted alongside scientific benefit.",
+    "TopHeadline": [
+      "Sustained",
+      "Focus",
+      "No",
+      "Crash"
+    ],
+    "VisualStructure": {
+      "PrimaryScene": "25-35-year-old gamer intensely focused in modern gaming setup with headset, ambient RGB lighting muted to warm tones, visibly alert and engaged despite late night; subtle lens flare from monitor screen highlighting face.",
+      "ProductPlacement": "Dynamind IQ chew pouch standing upright on gaming desk’s corner in crisp focus, accompanied by 2 chews beside it showing smooth chocolate texture.",
+      "ProductDetail": "Macro close-up of one soft chew with subtle bite mark and soft texture captured under warm light emphasizing premium chocolate flavor.",
+      "VisualHarmony": "Headline text anchored near gamer’s focused eyes; secondary claims positioned near packaging on desk; CTA near gamer’s hand reaching for chew from pouch.",
+      "TextOverlays": "large and readable for social media feed impact"
+    },
+    "OverlayText": [
+      [
+        "Sustained",
+        "Focus"
+      ],
+      [
+        "Cognatiq",
+        "+",
+        "Mushrooms",
+        "+",
+        "Caffeine"
+      ],
+      [
+        "Power",
+        "In",
+        "Your",
+        "Pocket"
+      ]
+    ],
+    "OverlayDirectives": {
+      "RequiredAlways": [
+        "Must Always include \"Available on Amazon\" official Amazon tag",
+        "Must Always include \"Chews Health\" official Logo from the references",
+        "Must Always include \"Dynamind IQ Product image\" from the references"
+      ]
+    }
+  }
+}

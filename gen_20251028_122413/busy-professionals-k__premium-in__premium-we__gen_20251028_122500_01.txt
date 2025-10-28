@@ -1,0 +1,27 @@
+Facebook ad 1:1 aspect. Campaign style variant: Premium Wellness & Convenience Style.  
+Style Palette: Warm, sophisticated natural tones; rich chocolate browns; clean whites and soft neutrals; accent with subtle gold or bronze for premium feel.  
+Style Cues: Authentic lifestyle imagery integrating office desks with laptop, notebook, and coffee cup; late morning natural light through office windows; shows a busy professional woman (28-40) focused yet relaxed; close-up of Dynamind IQ packaging on desk edge and 2 chocolate-flavored soft chews prominently displayed beside a smartphone and planner; product packaging fits perfectly in her blazer pocket as she prepares to leave a meeting room; soft warm lighting emphasizing premium chocolate texture of chews; no water bottle in sight, conveying on-the-go ease.  
+Style Notes: Combines lifestyle integration with pocket-ready convenience messaging. Showcases seamless daily usage for busy professionals managing meetings and multitasking. Focus on tangible premium sensory experience (smooth chocolate flavor, soft chew texture) and portability.  
+
+Top Headline (bold, sans-serif): ["Smart","energy and","focus"]  
+
+Visual Structure:  
+- Primary Scene: Focused busy professional at office desk managing multiple devices and notes, slight lens blur on background to direct attention to product.  
+- Product Placement: Dynamind IQ packaging front and center on desk, crisply detailed, authentic brand design.  
+- Product Detail: Two chocolate-flavored soft chews, showing smooth texture and embossed logo detail on surface, in sharp focus next to packaging.  
+- Visual Harmony: Headline anchored near laptop screen; proof text near chews; CTA near pocket with packaging visibly slipping in.  
+- Text overlays large, clear in dark gold on soft neutral background areas for maximum contrast.  
+
+Overlay Text (max 3 elements):  
+1. ["Smart","energy and","focus"]  
+2. ["Cognatiq","+","mushrooms","+","caffeine"]  
+3. ["Power","through work","sprints"]  
+
+Footer / End Card:  
+- Chews Health logo aligned bottom-center in warm bronze strip on soft white background.
+
+# Overlay Directives (append at the very end)
+REQUIRED ALWAYS:
+Must Always include "Available on Amazon" official Amazon tag
+Must Always include "Chews Health" official Logo from the references
+Must Always include "Dynamind IQ Product image" from the references

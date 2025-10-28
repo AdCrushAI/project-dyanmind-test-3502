@@ -1,0 +1,30 @@
+Facebook ad 1:1 aspect. Campaign style variant: Active Focus & Lifestyle Performance Style.  
+Style Palette: Warm energizing tones like amber and burnt orange combined with natural browns and soft neutrals; balanced with deep chocolate and charcoal accents.  
+Style Cues: Dynamic lifestyle shots in real environments: a dedicated gamer in mid-stream, intensely focused with glowing monitors reflecting on their face; warm amber lighting enhances energy and alertness; close-up of a hand reaching into a pants pocket to grab a Dynamind IQ chew; crisp, premium packaging and soft chew shown prominently on a desk near gaming gear.  
+Style Notes: Showcases sustained mental clarity and energy in a vibrant gaming environment; sophisticated yet approachable tone focusing on authentic daily use.  
+
+Top Headline (bold, sans-serif): ["Sustained","focus","for long","intense gaming","sessions"]
+
+Visual Structure:  
+- Primary Scene: Mid-20s gamer, intense focus, late-night eSports session with multiple screens; subtle amber backlight emphasizes alertness, hinting at fatigue fight.  
+- Product Placement: Dynamind IQ premium packaging front and center on desk near keyboard; open pack with two soft chews visible.  
+- Product Detail: Close-up of chocolate-flavored chew showing smooth texture and soft chew bite; clear ingredient callout label visible on package.  
+- Visual Harmony: Text anchored to gaming monitor bezel and packaging.  
+
+Overlay Text (max 3 elements):  
+1. ["Fast cognitive","support"] (anchored near gamer's focused eyes)  
+2. ["Power","in your","pocket"] (positioned near hand grabbing chew)  
+
+Footer / End Card:  
+- Brand logo ["Chews","Health"] in bottom strip on deep chocolate background.  
+- Tagline in quotes: ["Focus","in a Bite","Power","in Your","Pocket"]  
+
+Palette & Style:  
+- Background gradient blends warm amber into rich chocolate brown; burnt orange accents highlight text blocks.  
+- Bold sans-serif font for headline and primary text; medium weight for supporting copy.
+
+# Overlay Directives (append at the very end)
+REQUIRED ALWAYS:
+Must Always include "Available on Amazon" official Amazon tag
+Must Always include "Chews Health" official Logo from the references
+Must Always include "Dynamind IQ Product image" from the references

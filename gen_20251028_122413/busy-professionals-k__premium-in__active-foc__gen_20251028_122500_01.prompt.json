@@ -1,0 +1,50 @@
+{
+  "FacebookAd": {
+    "AspectRatio": "1:1",
+    "CampaignStyleVariant": "Active Focus & Lifestyle Performance Style",
+    "StylePalette": "Warm energizing tones like amber and burnt orange combined with natural browns and soft neutrals; balanced with deep chocolate and charcoal accents.",
+    "StyleCues": "Dynamic lifestyle shots in real environments, focusing on a busy professional in an office during a high-stakes meeting with laptop and notes; warm energetic lighting highlights focused facial expressions and quick chew snack; close-up on hand holding Dynamind IQ soft chew and open, pocket-ready package on desk; authentic moment showcasing sustained mental energy and multitasking.",
+    "StyleNotes": "Highlights product performance in action for busy professionals requiring sustained cognitive energy; vibrant integration with sophisticated yet approachable tone.",
+    "TopHeadline": [
+      "Smart",
+      "energy",
+      "and",
+      "focus"
+    ],
+    "VisualStructure": {
+      "PrimaryScene": "Busy professional at desk, engaged in multitasking with screen and documents, subtle amber backlight creating warmth and focus atmosphere.",
+      "ProductPlacement": "Dynamind IQ packaging front and center on desk, unopened and open pouch visible.",
+      "ProductDetail": "Two chocolate-flavored soft chews placed beside package clearly visible with smooth texture.",
+      "VisualHarmony": "Overlay text anchored near product and professional’s face, integrating naturally into the scene with subtle shading.",
+      "TextOverlays": "large and clear for social media feed visibility"
+    },
+    "OverlayText": [
+      [
+        "Smart",
+        "energy",
+        "and",
+        "focus"
+      ],
+      [
+        "Cognatiq",
+        "+",
+        "mushrooms",
+        "+",
+        "caffeine"
+      ],
+      [
+        "Power",
+        "through",
+        "work",
+        "sprints"
+      ]
+    ],
+    "OverlayDirectives": {
+      "RequiredAlways": [
+        "Must Always include \"Available on Amazon\" official Amazon tag",
+        "Must Always include \"Chews Health\" official Logo from the references",
+        "Must Always include \"Dynamind IQ Product image\" from the references"
+      ]
+    }
+  }
+}

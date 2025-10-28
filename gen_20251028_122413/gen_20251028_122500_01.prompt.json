@@ -1,0 +1,66 @@
+{
+  "FacebookAd": {
+    "aspectRatio": "1:1",
+    "campaignStyleVariant": "Premium Wellness & Convenience Style",
+    "TopHeadline": {
+      "text": [
+        "Smart",
+        "energy",
+        "and focus"
+      ],
+      "style": [
+        "bold",
+        "sans-serif"
+      ]
+    },
+    "PrimaryScene": {
+      "description": "Busy professional at a sleek office desk, mid-meeting on laptop, with subtle warm natural lighting highlighting a clean, organized workspace in rich chocolate brown and soft neutrals.",
+      "backgroundDetails": "A subtle soft-focus background shows briefcase and jacket pocket slightly open to reveal the Dynamind IQ pocket pack.",
+      "lensEffect": "Lens offers a natural warm glow emphasizing premium feel."
+    },
+    "ProductPlacement": {
+      "product": "Dynamind IQ",
+      "position": "front and center on the desk",
+      "focus": "sharply in focus",
+      "adjacentItems": "chocolate-flavored soft chews beside it clearly showing texture",
+      "packagingDesign": "matches authentic brand references exactly"
+    },
+    "ProductDetail": {
+      "items": "Two chocolate-coated Dynamind IQ soft chews",
+      "position": "in prime focus near package opening",
+      "features": [
+        "showcasing smooth texture",
+        "bite-sized form"
+      ]
+    },
+    "VisualHarmony": {
+      "textOverlaysPosition": "anchored near the package and professional’s hand reaching for a chew",
+      "deskElements": "complement with warm tones and sophisticated accents"
+    },
+    "OverlayText": [
+      [
+        "Smart",
+        "energy",
+        "and focus"
+      ],
+      [
+        "Cognatiq",
+        "+",
+        "mushrooms",
+        "+",
+        "caffeine"
+      ],
+      [
+        "Power through",
+        "your workday"
+      ]
+    ],
+    "OverlayDirectives": {
+      "REQUIRED_ALWAYS": [
+        "Must Always include \"Available on Amazon\" official Amazon tag",
+        "Must Always include \"Chews Health\" official Logo from the references",
+        "Must Always include \"Dynamind IQ Product image\" from the references"
+      ]
+    }
+  }
+}

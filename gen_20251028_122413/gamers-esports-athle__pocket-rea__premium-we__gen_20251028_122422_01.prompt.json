@@ -1,0 +1,68 @@
+{
+  "facebook_ad": {
+    "aspect_ratio": "1:1",
+    "campaign_style_variant": "Premium Wellness & Convenience Style",
+    "top_headline": {
+      "style": {
+        "font_weight": "bold",
+        "font_family": "sans-serif"
+      },
+      "text": [
+        "Sustained",
+        "focus for",
+        "long sessions"
+      ]
+    },
+    "visual_structure": {
+      "primary_scene": "A 25–35-year-old male gamer intensely focused in a warm-toned gaming setup with soft ambient lighting; headset on, keyboard and controller visible; mid-game action on screen; slight hint of fatigue but alertness maintained.",
+      "product_placement": "Dynamind IQ premium chocolate-flavored soft chews package positioned front and center on his gaming desk within reach.",
+      "product_detail": "Two chews out of the pack displayed up close showing smooth texture and rich chocolate color.",
+      "visual_harmony": "Text overlays anchored near the gamer’s face and product on desk."
+    },
+    "overlay_text": [
+      [
+        "Sustained",
+        "focus for",
+        "long sessions"
+      ],
+      [
+        "Cognatiq",
+        "mushrooms &",
+        "caffeine"
+      ],
+      [
+        "Power",
+        "in your",
+        "pocket"
+      ]
+    ],
+    "footer_end_card": {
+      "elements": [
+        "Brand logo in bottom strip"
+      ]
+    },
+    "palette_style": {
+      "colors": [
+        "Warm rich chocolate browns blending into soft natural neutrals in environment",
+        "Subtle gold highlights on packaging and text for premium feel",
+        "Clean white and warm beige background elements"
+      ],
+      "typography": {
+        "headline_cta": {
+          "font_weight": "bold",
+          "font_family": "sans-serif"
+        },
+        "proof": {
+          "font_weight": "medium"
+        }
+      }
+    },
+    "overlay_directives": {
+      "required_always": [
+        "Must Always include \"Available on Amazon\" official Amazon tag",
+        "Must Always include \"Chews Health\" official Logo from the references",
+        "Must Always include \"Dynamind IQ Product image\" from the references"
+      ]
+    }
+  }
+}

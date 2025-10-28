@@ -1,0 +1,27 @@
+Facebook ad 1:1 aspect. Campaign style variant: Science-Backed Credibility,& Educational Style.  
+Style Palette: Clean whites and light grays for clinical clarity; subtle warm accents (soft golds or muted browns); modern blue or teal highlights to imply science and trust.  
+Style Cues: Ingredient storytelling visuals highlighting Cognatiq, functional mushrooms, caffeine; transparent labeling close-ups with clear per-chew dosing; infographic style or stepwise patterns for cognitive support and energy benefits; professional but approachable aesthetic with easy-to-understand scientific content; before/during/after usage scenarios; testimonial authenticity and compliance-conscious language.  
+Style Notes: Targets trust and transparency through educational content, making complex ingredients accessible and credible. Reinforces the brand’s science-backed foundation while maintaining approachability and ease of understanding.
+
+Top Headline (bold, sans-serif): ["Improves","memory and","focus","without","crash"]
+
+Visual Structure:  
+- Primary Scene: Student at a desk late night, focused with open books and laptop, soft warm desk lamp lighting to evoke study atmosphere and cognitive endurance challenge.  
+- Product Placement: Dynamind IQ premium chocolate-flavored soft chews package prominently displayed next to notebook, open with one chew visible.  
+- Product Detail: Close-up overlay inset of a single chew with transparent label callouts highlighting Cognatiq, functional mushrooms, and caffeine dosing per chew.  
+- Visual Harmony: Text anchored near respective visuals (hook near student’s face, proof near product packaging, benefit near study materials).  
+- Text overlays large and readable for social feed.
+
+Overlay Text (max 3 elements):  
+1. ["Focus","in a","Bite"]  
+2. ["Science-backed","clear dosing"]  
+3. ["Sustain","study stamina"]
+
+Footer / End Card:  
+- Bottom strip with Chews Health brand logo left-aligned
+
+# Overlay Directives (append at the very end)
+REQUIRED ALWAYS:
+Must Always include "Available on Amazon" official Amazon tag
+Must Always include "Chews Health" official Logo from the references
+Must Always include "Dynamind IQ Product image" from the references

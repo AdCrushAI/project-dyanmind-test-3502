@@ -1,0 +1,29 @@
+Facebook ad 1:1 aspect. Campaign style variant: Premium Wellness & Convenience Style.  
+Style Palette: Warm, sophisticated natural tones; rich chocolate browns; clean whites and soft neutrals; accent with subtle gold or bronze for premium feel.  
+Style Cues: Authentic lifestyle imagery of a 25-45-year-old student in a cozy study nook surrounded by books and laptop, warm natural light streaming in; close-up of Dynamind IQ packaging and soft chocolate chew on desk; visible pocket or backpack with product pack peeking; soft lighting highlighting rich chocolate texture and premium packaging finish.  
+Style Notes: Combines real study session ambiance with pocket-ready convenience and premium sensory cues. Highlights no-water-needed chewability and focused cognitive support for intense learning periods.  
+
+Top Headline (bold, sans-serif): ["Improves","memory","and","focus"]  
+
+Visual Structure:  
+- Primary Scene: ["Focused","student","mid-study","session","hand","reaching","for","Dynamind","IQ","chew","on","desk"]  
+- Product Placement: ["Dynamind","IQ","pack","upright","chews","visible","beside","laptop","keyboard","in","sharp","focus"]  
+- Product Detail: ["One","soft","chocolate","chew","shown","close","with","clear","texture","and","branding"]  
+- Visual Harmony: ["Text","overlays","anchored","near","product","and","study","setup","elements","integrated","naturally","in","scene"]  
+- Text overlays large, clear, sans-serif for social feed legibility.  
+
+Overlay Text (max 3 elements):  
+1. ["Improves","memory","and","focus"]  
+2. ["Clear","per-chew","Cognatiq","dosing"]  
+3. ["Study","smart","anytime"]  
+
+Palette & Style:  
+- Background soft neutral desk surface with warm natural light accents.  
+- Package’s rich chocolate browns and gold highlights integrated seamlessly.  
+- Bold sans-serif for headline; medium sans-serif for proof and CTA.
+
+# Overlay Directives (append at the very end)
+REQUIRED ALWAYS:
+Must Always include "Available on Amazon" official Amazon tag
+Must Always include "Chews Health" official Logo from the references
+Must Always include "Dynamind IQ Product image" from the references

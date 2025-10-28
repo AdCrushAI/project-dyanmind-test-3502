@@ -1,0 +1,44 @@
+{
+  "FacebookAd": {
+    "aspectRatio": "1:1",
+    "campaignStyleVariant": "Active Focus & Lifestyle Performance Style",
+    "stylePalette": "Warm energizing tones like amber and burnt orange combined with natural browns and soft neutrals; balanced with deep chocolate and charcoal accents.",
+    "styleCues": "Dynamic lifestyle shots in real environments: professional meeting with laptop and notes; busy professional woman grabbing a Dynamind IQ chew from pocket; close-up on focused facial expression; product pack and chews in hand with warm, vibrant lighting evoking mental clarity and motivation.",
+    "styleNotes": "Highlights product performance in action for busy professionals demanding sustained focus and mental energy in work sprints. Emphasizes vibrant everyday life integration with sophisticated yet approachable tone.",
+    "topHeadline": [
+      "Smart energy",
+      "and focus",
+      "for multitasking"
+    ],
+    "visualStructure": {
+      "primaryScene": "Woman in mid-meeting, focused and engaged, subtly grabbing Dynamind IQ from pocket",
+      "productPlacement": "Authentic Dynamind IQ packaging front and center in hand, showing chocolate-flavored soft chews partially out of pack",
+      "productDetail": "Close-up on one chocolate chew between fingers, showcasing smooth texture",
+      "visualHarmony": "Text anchored near hand and laptop, integrating naturally with scene",
+      "textOverlays": "large and clear for social feeds"
+    },
+    "overlayText": [
+      [
+        "Smart energy",
+        "and focus"
+      ],
+      [
+        "Power through",
+        "work sprints"
+      ],
+      [
+        "Focus in",
+        "a Bite",
+        "Power in",
+        "Your Pocket"
+      ]
+    ],
+    "overlayDirectives": {
+      "REQUIRED_ALWAYS": [
+        "Must Always include \"Available on Amazon\" official Amazon tag",
+        "Must Always include \"Chews Health\" official Logo from the references",
+        "Must Always include \"Dynamind IQ Product image\" from the references"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "persona": {
+    "slug": "busy-professionals-knowledge-workers",
+    "full_name": "Busy Professionals & Knowledge Workers",
+    "target": "28-50-year-olds managing demanding workdays with meetings, multitasking, and high-output projects",
+    "primary_pain_point": "Mental fatigue and difficulty maintaining peak cognitive performance throughout the day",
+    "value_proposition": "Dynamind IQ delivers a daily cognitive boost with smooth chocolate flavor and transparent dosing to power through work sprints"
+  },
+  "hook": {
+    "slug": "no-water-neededconvenient-for-any-work-environment",
+    "full_text": "No water needed—convenient for any work environment"
+  },
+  "style": {
+    "slug": "science-backed-credibility-educational-style",
+    "full_name": "Science-Backed Credibility & Educational Style",
+    "palette": "Clean whites and light grays for clinical clarity; subtle warm accents (soft golds or muted browns); modern blue or teal highlights to imply science and trust",
+    "visual_cues": "Ingredient storytelling visuals highlighting Cognatiq, functional mushrooms, caffeine; transparent labeling close-ups with clear per-chew dosing; infographic style or stepwise patterns for cognitive support and energy benefits; professional but approachable aesthetic with easy-to-understand scientific content; before/during/after usage scenarios; testimonial authenticity and compliance-conscious language",
+    "notes": "Targets trust and transparency through educational content, making complex ingredients accessible and credible. Reinforces the brand’s science-backed foundation while maintaining approachability and ease of understanding."
+  },
+  "generation": {
+    "timestamp": "2025-10-28T12:24:54.143230Z",
+    "filename": "gen_20251028_122423_01.png"
+  }
+}

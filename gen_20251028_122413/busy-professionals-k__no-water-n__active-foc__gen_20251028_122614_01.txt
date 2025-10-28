@@ -1,0 +1,32 @@
+Facebook ad 1:1 aspect. Campaign style variant: Active Focus & Lifestyle Performance Style.  
+Style Palette: Warm energizing tones like amber and burnt orange combined with natural browns and soft neutrals; balanced with deep chocolate and charcoal accents.  
+Style Cues: Dynamic lifestyle shot of a focused busy professional in a sleek modern office during a video meeting, slight motion blur to show multitasking energy; warm vibrant amber lighting highlights face and hands; close-up of hand reaching into jacket pocket to grab a Dynamind IQ pouch with clear product and chew visible; sharp focus on product packaging and a chocolate chew next to laptop.  
+Style Notes: Emphasizes seamless on-the-go brain boost amid mental fatigue and demanding work; sophisticated yet approachable tone; energetic yet natural atmosphere.  
+
+Top Headline (bold, sans-serif): ["Smart energy","and focus","for multitasking"]  
+
+Visual Structure:  
+- Primary Scene: Busy professional at desk during virtual meeting, looking engaged and alert, slight lens flare from warm light.  
+- Product Placement: Dynamind IQ pouch in hand, prominently displayed front and center, chew partially visible.  
+- Product Detail: One chocolate chew placed next to laptop keyboard in sharp focus.  
+- Visual Harmony: Headline text anchored near user’s focused face; proof & benefit text anchored near product pouch and chew.  
+- Text overlays large and clear for social media feed readability.  
+
+Overlay Text (max 3 elements):  
+1. ["Smart energy","and focus"]  
+2. ["Cognatiq","mushrooms &","caffeine"]  
+3. ["Power through","work sprints"]  
+
+Footer / End Card:  
+- Chews Health brand logo in bottom strip with burnt orange background.  
+- Tagline: Focus in a Bite. Power in Your Pocket.  
+
+Palette & Style:  
+- Background utilizes warm neutrals and deep chocolate tones softly blending into amber highlights around product and face.  
+- Bold sans-serif font for headline; medium weight for proof and benefit text.
+
+# Overlay Directives (append at the very end)
+REQUIRED ALWAYS:
+Must Always include "Available on Amazon" official Amazon tag
+Must Always include "Chews Health" official Logo from the references
+Must Always include "Dynamind IQ Product image" from the references

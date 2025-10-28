@@ -1,0 +1,31 @@
+Facebook ad 1:1 aspect. Campaign style variant: Active Focus & Lifestyle Performance Style.  
+Style Palette: Warm energizing tones like amber and burnt orange combined with natural browns and soft neutrals; balanced with deep chocolate and charcoal accents.  
+Style Cues: Dynamic lifestyle shots in real environments: study sessions with textbooks and laptops, focused intense learners late at night with warm desk lighting; moments capturing a quick grab of Dynamind IQ chew from pocket or bag; close-ups on focused facial expressions and product in hand; authentic daily routines emphasizing sustained energy and cognitive support; vibrant warm energetic lighting to evoke mental clarity and motivation.  
+Style Notes: Highlights product performance in action for students balancing studies and exam prep requiring sustained concentration and memory. Emphasizes vibrant everyday life integration with a sophisticated yet approachable tone.
+
+Top Headline (bold, sans-serif): ["Improves","memory","and","focus"]
+
+Visual Structure:  
+- Primary Scene: ["Focused","student","at","library","desk","surrounded","by","study","materials","laptop","open","soft","warm","lighting","highlighting","concentrated","expression","night","setting"]  
+- Product Placement: ["Dynamind","IQ","premium","chocolate-flavored","soft","chew","pouch","visibly","held","in","hand","open","with","a","chew","partially","extracted"]  
+- Product Detail: ["One","chew","in","close-up","with","visible","chocolate","texture","and","packaging","label","with","clear","Cognatiq","mushrooms","caffeine","amounts"]  
+- Visual Harmony: ["Overlay","text","anchored","near","student’s","face","chew","in","hand","and","pouch","on","desk"]  
+
+Overlay Text (max 3 elements):  
+1. ["Clear","per-chew","dosing"]  
+2. ["Focus","in","a","bite"]
+
+Footer / End Card:  
+- Chews Health brand logo in bottom strip.  
+- Tagline in quotes: ["Focus","in","a","Bite","Power","in","Your","Pocket"]  
+
+Palette & Style:  
+- Background warm amber gradient blending to soft neutrals behind the focused student.  
+- Accents in deep chocolate brown on product and charcoal shadows for contrast.  
+- Bold sans-serif for headline and overlay text; medium weight for proof points and benefits.
+
+# Overlay Directives (append at the very end)
+REQUIRED ALWAYS:
+Must Always include "Available on Amazon" official Amazon tag
+Must Always include "Chews Health" official Logo from the references
+Must Always include "Dynamind IQ Product image" from the references

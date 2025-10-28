@@ -1,0 +1,59 @@
+{
+  "FacebookAd": {
+    "AspectRatio": "1:1",
+    "CampaignStyleVariant": "Premium Wellness & Convenience Style",
+    "TopHeadline": {
+      "Style": "bold, sans-serif",
+      "Content": [
+        "Focus",
+        "that lasts",
+        "all night"
+      ]
+    },
+    "VisualStructure": {
+      "PrimaryScene": "A focused student at a cozy, tidy study desk with textbooks and laptop open, warm natural light filtering through a window, showing concentration during late-night study.",
+      "ProductPlacement": "Dynamind IQ soft chew pouch prominently placed on desk near hands reaching for a chew.",
+      "ProductDetail": "Close-up of one soft chocolate chew beside the open pouch, texture and richness evident.",
+      "VisualHarmony": "Overlay text anchored to desk surface and product pouch, natural warm tones complementing rich chocolate browns.",
+      "TextOverlays": "Large and readable"
+    },
+    "OverlayText": [
+      [
+        "Improves memory",
+        "and focus"
+      ],
+      [
+        "Brain boost",
+        "anytime"
+      ]
+    ],
+    "FooterEndCard": {
+      "Logo": "Chews Health logo in bottom strip",
+      "Tagline": [
+        "Focus in",
+        "a Bite",
+        "Power in",
+        "Your Pocket"
+      ]
+    },
+    "PaletteAndStyle": {
+      "Colors": [
+        "Warm chocolate browns",
+        "clean white desk surfaces",
+        "soft neutrals in background"
+      ],
+      "Accent": "Subtle bronze accent on packaging highlights premium feel",
+      "Fonts": {
+        "HeadlineAndOverlays": "Bold sans-serif",
+        "SupportingText": "Medium weight"
+      }
+    },
+    "OverlayDirectives": {
+      "REQUIRED_ALWAYS": [
+        "Must Always include \"Available on Amazon\" official Amazon tag",
+        "Must Always include \"Chews Health\" official Logo from the references",
+        "Must Always include \"Dynamind IQ Product image\" from the references"
+      ]
+    }
+  }
+}

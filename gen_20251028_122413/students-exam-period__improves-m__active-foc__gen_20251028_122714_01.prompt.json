@@ -1,0 +1,131 @@
+{
+  "ad": {
+    "platform": "Facebook",
+    "aspect_ratio": "1:1",
+    "campaign_style_variant": "Active Focus & Lifestyle Performance Style",
+    "style_palette": "Warm energizing tones like amber and burnt orange combined with natural browns and soft neutrals; balanced with deep chocolate and charcoal accents.",
+    "style_cues": "Dynamic lifestyle shots in real environments: study sessions with textbooks and laptops, focused intense learners late at night with warm desk lighting; moments capturing a quick grab of Dynamind IQ chew from pocket or bag; close-ups on focused facial expressions and product in hand; authentic daily routines emphasizing sustained energy and cognitive support; vibrant warm energetic lighting to evoke mental clarity and motivation.",
+    "style_notes": "Highlights product performance in action for students balancing studies and exam prep requiring sustained concentration and memory. Emphasizes vibrant everyday life integration with a sophisticated yet approachable tone.",
+    "top_headline": [
+      "Improves",
+      "memory",
+      "and",
+      "focus"
+    ],
+    "visual_structure": {
+      "primary_scene": [
+        "Focused",
+        "student",
+        "at",
+        "library",
+        "desk",
+        "surrounded",
+        "by",
+        "study",
+        "materials",
+        "laptop",
+        "open",
+        "soft",
+        "warm",
+        "lighting",
+        "highlighting",
+        "concentrated",
+        "expression",
+        "night",
+        "setting"
+      ],
+      "product_placement": [
+        "Dynamind",
+        "IQ",
+        "premium",
+        "chocolate-flavored",
+        "soft",
+        "chew",
+        "pouch",
+        "visibly",
+        "held",
+        "in",
+        "hand",
+        "open",
+        "with",
+        "a",
+        "chew",
+        "partially",
+        "extracted"
+      ],
+      "product_detail": [
+        "One",
+        "chew",
+        "in",
+        "close-up",
+        "with",
+        "visible",
+        "chocolate",
+        "texture",
+        "and",
+        "packaging",
+        "label",
+        "with",
+        "clear",
+        "Cognatiq",
+        "mushrooms",
+        "caffeine",
+        "amounts"
+      ],
+      "visual_harmony": [
+        "Overlay",
+        "text",
+        "anchored",
+        "near",
+        "student’s",
+        "face",
+        "chew",
+        "in",
+        "hand",
+        "and",
+        "pouch",
+        "on",
+        "desk"
+      ]
+    },
+    "overlay_text": [
+      [
+        "Clear",
+        "per-chew",
+        "dosing"
+      ],
+      [
+        "Focus",
+        "in",
+        "a",
+        "bite"
+      ]
+    ],
+    "footer_end_card": {
+      "brand_logo": "Chews Health brand logo in bottom strip",
+      "tagline": [
+        "Focus",
+        "in",
+        "a",
+        "Bite",
+        "Power",
+        "in",
+        "Your",
+        "Pocket"
+      ]
+    },
+    "palette_style": {
+      "background": "warm amber gradient blending to soft neutrals behind the focused student",
+      "accents": "deep chocolate brown on product and charcoal shadows for contrast",
+      "fonts": {
+        "headline_overlay_text": "Bold sans-serif",
+        "proof_points_benefits": "medium weight"
+      }
+    },
+    "overlay_directives": [
+      "Must Always include \"Available on Amazon\" official Amazon tag",
+      "Must Always include \"Chews Health\" official Logo from the references",
+      "Must Always include \"Dynamind IQ Product image\" from the references"
+    ]
+  }
+}

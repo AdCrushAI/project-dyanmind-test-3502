@@ -1,0 +1,28 @@
+Facebook ad 1:1 aspect. Campaign style variant: Premium Wellness & Convenience Style.
+
+Top Headline (bold, sans-serif): ["Sustained","Focus","for","Gamers"]
+
+Visual Structure:
+- Primary Scene: A focused 25-35-year-old gamer in a modern gaming setup, illuminated by soft warm lighting with rich chocolate brown and neutral tones, intensely engaged in gameplay with subtle gold accents around the desk.
+- Product Placement: Dynamind IQ chew bag placed prominently on the desk within easy reach, matching exact product packaging from references.
+- Product Detail: Close-up of one chocolate-flavored soft chew beside the open package, showcasing texture and size.
+- Visual Harmony: Text overlays anchored to desk objects— headset, game controller, or the chew pack—ensuring natural integration.
+
+Overlay Text (max 3 elements):
+1. ["Stedy","Focus","No","Crash"]
+2. ["Cognatiq","+","Mushrooms","+","Caffeine"]
+3. ["Power","in","Your","Pocket"]
+
+Footer / End Card:
+- Brand logo in bottom strip.
+
+Palette & Style:
+- Warm sophisticated natural tones with rich chocolate browns, clean whites, soft neutrals, accented by subtle bronze highlights.
+- Background softly blurred gaming setup with natural light casting warm glows.
+- Bold sans-serif font for headline and overlays; medium weight for supportive proof and CTA text.
+
+# Overlay Directives (append at the very end)
+REQUIRED ALWAYS:
+Must Always include "Available on Amazon" official Amazon tag
+Must Always include "Chews Health" official Logo from the references
+Must Always include "Dynamind IQ Product image" from the references

@@ -1,0 +1,116 @@
+{
+  "FacebookAd": {
+    "aspectRatio": "1:1",
+    "campaignStyleVariant": "Premium Wellness & Convenience Style",
+    "stylePalette": "Warm, sophisticated natural tones; rich chocolate browns; clean whites and soft neutrals; accent with subtle gold or bronze for premium feel.",
+    "styleCues": [
+      "Authentic lifestyle imagery of a 25-45-year-old student in a cozy study nook surrounded by books and laptop, warm natural light streaming in",
+      "close-up of Dynamind IQ packaging and soft chocolate chew on desk",
+      "visible pocket or backpack with product pack peeking",
+      "soft lighting highlighting rich chocolate texture and premium packaging finish"
+    ],
+    "styleNotes": "Combines real study session ambiance with pocket-ready convenience and premium sensory cues. Highlights no-water-needed chewability and focused cognitive support for intense learning periods.",
+    "topHeadline": {
+      "text": [
+        "Improves",
+        "memory",
+        "and",
+        "focus"
+      ],
+      "font": "bold, sans-serif"
+    },
+    "visualStructure": {
+      "primaryScene": [
+        "Focused",
+        "student",
+        "mid-study",
+        "session",
+        "hand",
+        "reaching",
+        "for",
+        "Dynamind",
+        "IQ",
+        "chew",
+        "on",
+        "desk"
+      ],
+      "productPlacement": [
+        "Dynamind",
+        "IQ",
+        "pack",
+        "upright",
+        "chews",
+        "visible",
+        "beside",
+        "laptop",
+        "keyboard",
+        "in",
+        "sharp",
+        "focus"
+      ],
+      "productDetail": [
+        "One",
+        "soft",
+        "chocolate",
+        "chew",
+        "shown",
+        "close",
+        "with",
+        "clear",
+        "texture",
+        "and",
+        "branding"
+      ],
+      "visualHarmony": [
+        "Text",
+        "overlays",
+        "anchored",
+        "near",
+        "product",
+        "and",
+        "study",
+        "setup",
+        "elements",
+        "integrated",
+        "naturally",
+        "in",
+        "scene"
+      ],
+      "textOverlaysStyle": "large, clear, sans-serif for social feed legibility"
+    },
+    "overlayText": [
+      [
+        "Improves",
+        "memory",
+        "and",
+        "focus"
+      ],
+      [
+        "Clear",
+        "per-chew",
+        "Cognatiq",
+        "dosing"
+      ],
+      [
+        "Study",
+        "smart",
+        "anytime"
+      ]
+    ],
+    "paletteAndStyle": {
+      "background": "soft neutral desk surface with warm natural light accents",
+      "packageColors": "rich chocolate browns and gold highlights integrated seamlessly",
+      "fonts": {
+        "headline": "bold sans-serif",
+        "proofAndCTA": "medium sans-serif"
+      }
+    },
+    "overlayDirectives": {
+      "requiredAlways": [
+        "Must Always include \"Available on Amazon\" official Amazon tag",
+        "Must Always include \"Chews Health\" official Logo from the references",
+        "Must Always include \"Dynamind IQ Product image\" from the references"
+      ]
+    }
+  }
+}

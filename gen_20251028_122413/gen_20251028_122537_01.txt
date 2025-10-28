@@ -1,0 +1,24 @@
+Facebook ad 1:1 aspect. Campaign style variant: Premium Wellness & Convenience Style.  
+Style Palette: Warm, sophisticated natural tones; rich chocolate browns; clean whites and soft neutrals; accent with subtle gold or bronze for premium feel.  
+Style Cues: Authentic lifestyle imagery integrating gaming setups with warm natural lighting; close-up of Dynamind IQ premium chocolate chews and packaging prominently displayed on a sleek gaming desk; gamer reaching into pocket-ready pouch mid-session; soft lighting emphasizing rich chocolate texture and premium packaging; demonstration of no water needed—chewing directly during play.  
+Style Notes: Combines immersive gaming lifestyle with pocket-ready convenience messaging; showcases seamless on-the-go usage for gamers requiring sustained focus and energy; tactile premium sensory experience (smooth chocolate chew) highlighted alongside scientific benefit.  
+
+Top Headline (bold, sans-serif): ["Sustained","Focus","No","Crash"]  
+
+Visual Structure:  
+- Primary Scene: 25-35-year-old gamer intensely focused in modern gaming setup with headset, ambient RGB lighting muted to warm tones, visibly alert and engaged despite late night; subtle lens flare from monitor screen highlighting face.  
+- Product Placement: Dynamind IQ chew pouch standing upright on gaming desk’s corner in crisp focus, accompanied by 2 chews beside it showing smooth chocolate texture.  
+- Product Detail: Macro close-up of one soft chew with subtle bite mark and soft texture captured under warm light emphasizing premium chocolate flavor.  
+- Visual Harmony: Headline text anchored near gamer’s focused eyes; secondary claims positioned near packaging on desk; CTA near gamer’s hand reaching for chew from pouch.  
+- Text overlays large and readable for social media feed impact.  
+
+Overlay Text (max 3 elements):  
+1. ["Sustained","Focus"]  
+2. ["Cognatiq","+","Mushrooms","+","Caffeine"]  
+3. ["Power","In","Your","Pocket"]
+
+# Overlay Directives (append at the very end)
+REQUIRED ALWAYS:
+Must Always include "Available on Amazon" official Amazon tag
+Must Always include "Chews Health" official Logo from the references
+Must Always include "Dynamind IQ Product image" from the references

@@ -1,0 +1,29 @@
+Facebook ad 1:1 aspect. Campaign style variant: Premium Wellness & Convenience Style.
+
+Top Headline (bold, sans-serif): ["Focus","that lasts","all night"]
+
+Visual Structure:
+- Primary Scene: A focused student at a cozy, tidy study desk with textbooks and laptop open, warm natural light filtering through a window, showing concentration during late-night study.
+- Product Placement: Dynamind IQ soft chew pouch prominently placed on desk near hands reaching for a chew.
+- Product Detail: Close-up of one soft chocolate chew beside the open pouch, texture and richness evident.
+- Visual Harmony: Overlay text anchored to desk surface and product pouch, natural warm tones complementing rich chocolate browns.
+- Text overlays large and readable.
+
+Overlay Text (max 3 elements):
+1. ["Improves memory","and focus"]
+2. ["Brain boost","anytime"]
+
+Footer / End Card:
+- Chews Health logo in bottom strip.
+- Tagline in quotes: ["Focus in","a Bite","Power in","Your Pocket"]
+
+Palette & Style:
+- Warm chocolate browns, clean white desk surfaces, soft neutrals in background.
+- Subtle bronze accent on packaging highlights premium feel.
+- Bold sans-serif font for headline and overlays; medium weight for supporting text.
+
+# Overlay Directives (append at the very end)
+REQUIRED ALWAYS:
+Must Always include "Available on Amazon" official Amazon tag
+Must Always include "Chews Health" official Logo from the references
+Must Always include "Dynamind IQ Product image" from the references

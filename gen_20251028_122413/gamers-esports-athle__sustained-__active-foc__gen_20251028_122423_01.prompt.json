@@ -1,0 +1,44 @@
+{
+  "Facebook ad 1:1": {
+    "Campaign style variant": "Active Focus,& Lifestyle Performance Style",
+    "Style Palette": "Warm energizing tones like amber and burnt orange combined with natural browns and soft neutrals; balanced with deep chocolate and charcoal accents.",
+    "Style Cues": "Dynamic lifestyle shots in real environments: gaming setups, professional meetings, study sessions, gym; moments capturing quick grab-and-go energy boosts; close-ups on focused facial expressions and product in hand; authentic daily routines emphasizing sustained energy and cognitive support; vibrant warm energetic lighting to evoke mental clarity and motivation.",
+    "Style Notes": "Highlights product performance in action for target users requiring sustained focus and mental energy. Emphasizes vibrant everyday life integration with a sophisticated yet approachable tone.",
+    "Top Headline (bold, sans-serif)": [
+      "Sustained focus",
+      "for long",
+      "intense gaming",
+      "sessions"
+    ],
+    "Visual Structure": {
+      "Primary Scene": "Young gamer in a vibrant, immersive gaming setup intensely focused mid-gameplay, ambient amber lighting casting warm glows highlighting alert eyes and dynamic posture; energy and concentration palpable.",
+      "Product Placement": "Dynamind IQ pack displayed prominently on gamer’s desk within easy reach; one soft chew held between thumb and forefinger in sharp detail, showing smooth chocolate texture.",
+      "Product Detail": "Close-up inset of individual chew partially unwrapped, highlighting soft texture and premium chocolate color with visible refined packaging details.",
+      "Visual Harmony": "Top headline anchored near gamer’s face; product features float beside the chew; warm tones unify scene and product."
+    },
+    "Overlay Text (max 3 elements)": [
+      [
+        "Sustained focus",
+        "for long",
+        "intense gaming",
+        "sessions"
+      ],
+      [
+        "Cognatiq",
+        "+ mushrooms",
+        "+ caffeine"
+      ],
+      [
+        "Power",
+        "in your pocket"
+      ]
+    ],
+    "Overlay Directives": {
+      "REQUIRED ALWAYS": [
+        "Must Always include \"Available on Amazon\" official Amazon tag",
+        "Must Always include \"Chews Health\" official Logo from the references",
+        "Must Always include \"Dynamind IQ Product image\" from the references"
+      ]
+    }
+  }
+}

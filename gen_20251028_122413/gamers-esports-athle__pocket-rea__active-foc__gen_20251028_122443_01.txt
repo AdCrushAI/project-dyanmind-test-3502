@@ -1,0 +1,24 @@
+Facebook ad 1:1 aspect. Campaign style variant: Active Focus & Lifestyle Performance Style.  
+Style Palette: Warm energizing tones like amber and burnt orange combined with natural browns and soft neutrals; balanced with deep chocolate and charcoal accents.  
+Style Cues: Dynamic lifestyle shots in real environments: gaming setups, professional meetings, study sessions, gym; moments capturing quick grab-and-go energy boosts; close-ups on focused facial expressions and product in hand; authentic daily routines emphasizing sustained energy and cognitive support; vibrant warm energetic lighting to evoke mental clarity and motivation.  
+Style Notes: Highlights product performance in action for target users requiring sustained focus and mental energy. Emphasizes vibrant everyday life integration with a sophisticated yet approachable tone.
+
+Top Headline (bold, sans-serif): ["Sustained","focus","for long","play"]
+
+Visual Structure:  
+- Primary Scene: A focused ["25-35-year-old","gamer","in mid-game","at a","modern","gaming setup","illuminated","with warm","amber lighting"], ["showing","concentration","and quick","reflexes"]  
+- Product Placement: ["Dynamind IQ","chews","and packaging","prominently","positioned","near the","keyboard"], ["hand holding","a single","chocolate chew","ready","to consume"]  
+- Product Detail: ["Close-up","of one","chew","with visible","smooth texture","and clear","packaging labeling","showing","Cognatiq","and mushroom","icons"]  
+- Visual Harmony: ["Top headline","anchored","to the","gamer’s intense","gaze"] ["Science-backed","steady energy"] ["text overlay","near the","product close-up"] ["Power","in your","pocket"] ["phrase aligned","with the","pocket-ready","pouch","held subtly","in the","gamer’s jeans","pocket"]  
+- Text overlays ["must be","large","and readable","in social","feeds"]
+
+Overlay Text (max 3 elements):  
+1. ["Sustained","focus","for long","play"]  
+2. ["Science-backed","steady energy"]  
+3. ["Power","in your","pocket"]
+
+# Overlay Directives (append at the very end)
+REQUIRED ALWAYS:
+Must Always include "Available on Amazon" official Amazon tag
+Must Always include "Chews Health" official Logo from the references
+Must Always include "Dynamind IQ Product image" from the references

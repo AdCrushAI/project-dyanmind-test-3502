@@ -1,0 +1,24 @@
+Facebook ad 1:1 aspect. Campaign style variant: Active Focus & Lifestyle Performance Style.  
+Style Palette: Warm energizing tones like amber and burnt orange combined with natural browns and soft neutrals; balanced with deep chocolate and charcoal accents.  
+Style Cues: Dynamic lifestyle shots in real environments, focusing on a busy professional in an office during a high-stakes meeting with laptop and notes; warm energetic lighting highlights focused facial expressions and quick chew snack; close-up on hand holding Dynamind IQ soft chew and open, pocket-ready package on desk; authentic moment showcasing sustained mental energy and multitasking.  
+Style Notes: Highlights product performance in action for busy professionals requiring sustained cognitive energy; vibrant integration with sophisticated yet approachable tone.  
+
+Top Headline (bold, sans-serif): ["Smart","energy","and","focus"]  
+
+Visual Structure:  
+- Primary Scene: Busy professional at desk, engaged in multitasking with screen and documents, subtle amber backlight creating warmth and focus atmosphere.  
+- Product Placement: Dynamind IQ packaging front and center on desk, unopened and open pouch visible.  
+- Product Detail: Two chocolate-flavored soft chews placed beside package clearly visible with smooth texture.  
+- Visual Harmony: Overlay text anchored near product and professional’s face, integrating naturally into the scene with subtle shading.  
+- Text overlays large and clear for social media feed visibility.  
+
+Overlay Text (max 3 elements):  
+1. ["Smart","energy","and","focus"]  
+2. ["Cognatiq","+","mushrooms","+","caffeine"]  
+3. ["Power","through","work","sprints"]
+
+# Overlay Directives (append at the very end)
+REQUIRED ALWAYS:
+Must Always include "Available on Amazon" official Amazon tag
+Must Always include "Chews Health" official Logo from the references
+Must Always include "Dynamind IQ Product image" from the references

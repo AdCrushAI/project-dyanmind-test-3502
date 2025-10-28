@@ -1,0 +1,84 @@
+{
+  "FacebookAd": {
+    "AspectRatio": "1:1",
+    "CampaignStyleVariant": "Science-Backed Credibility & Educational Style",
+    "TopHeadline": {
+      "Text": [
+        "Sustained",
+        "focus for",
+        "long gaming"
+      ],
+      "Font": {
+        "Weight": "bold",
+        "Family": "sans-serif"
+      }
+    },
+    "VisualStructure": {
+      "PrimaryScene": {
+        "Subject": "A focused 25-35-year-old gamer",
+        "Setting": "sleek gaming setup",
+        "Lighting": "ambient soft blue and teal lighting highlighting concentration and energy",
+        "Effects": "subtle lens flare on screen and fingers poised on controls"
+      },
+      "ProductPlacement": {
+        "Product": "Dynamind IQ soft chew pack",
+        "Location": "prominently on desk edge",
+        "Packaging": "pocket-ready packaging visible"
+      },
+      "ProductDetail": {
+        "Items": "Two soft chocolate-flavored chews in sharp focus",
+        "Infographic": {
+          "Style": "transparent bubble",
+          "Content": [
+            "Cognatiq",
+            "functional mushrooms",
+            "caffeine with per-chew dosing"
+          ]
+        }
+      },
+      "VisualHarmony": {
+        "TextPlacement": "anchored near gamer's hand and product pack",
+        "TextSize": "large and clear for social media"
+      }
+    },
+    "OverlayText": [
+      [
+        "Sustained",
+        "focus for",
+        "long gaming"
+      ],
+      [
+        "Cognatiq",
+        "+ Mushrooms",
+        "+ Caffeine"
+      ],
+      [
+        "Steady energy",
+        "no jitters"
+      ]
+    ],
+    "FooterEndCard": {
+      "BrandLogo": "in bottom strip"
+    },
+    "PaletteAndStyle": {
+      "Background": "clean whites and light grays",
+      "Highlights": "modern blue and teal highlights around infographic and product edges",
+      "Accent": "soft gold accent glow around chews for premium feel",
+      "Font": {
+        "Headline": {
+          "Weight": "bold",
+          "Family": "sans-serif",
+          "Color": "dark teal"
+        },
+        "SupportText": {
+          "Weight": "medium"
+        }
+      }
+    },
+    "OverlayDirectives": [
+      "Must Always include \"Available on Amazon\" official Amazon tag",
+      "Must Always include \"Chews Health\" official Logo from the references",
+      "Must Always include \"Dynamind IQ Product image\" from the references"
+    ]
+  }
+}

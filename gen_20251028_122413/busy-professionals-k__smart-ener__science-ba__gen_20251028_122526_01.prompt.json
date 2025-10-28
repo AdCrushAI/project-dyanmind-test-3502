@@ -1,0 +1,60 @@
+{
+  "facebook_ad": {
+    "aspect_ratio": "1:1",
+    "campaign_style_variant": "Science-Backed Credibility,& Educational Style",
+    "style_palette": {
+      "colors": [
+        "Clean whites and light grays for clinical clarity",
+        "subtle warm accents (soft golds or muted browns)",
+        "modern blue or teal highlights to imply science and trust"
+      ]
+    },
+    "style_cues": [
+      "Ingredient storytelling visuals highlighting Cognatiq, functional mushrooms, caffeine",
+      "transparent labeling close-ups with clear per-chew dosing",
+      "infographic style or stepwise patterns for cognitive support and energy benefits",
+      "professional but approachable aesthetic with easy-to-understand scientific content",
+      "before/during/after usage scenarios",
+      "testimonial authenticity and compliance-conscious language"
+    ],
+    "style_notes": "Targets trust and transparency through educational content, making complex ingredients accessible and credible. Reinforces the brand’s science-backed foundation while maintaining approachability and ease of understanding.",
+    "top_headline": [
+      "Smart energy",
+      "and focus",
+      "for multitasking"
+    ],
+    "visual_structure": {
+      "primary_scene": "Busy professional at a cluttered desk with multiple screens and notes, showing mild fatigue but focused through the day’s workflow under soft spotlighting.",
+      "product_placement": "Dynamind IQ packaging front-center, pocket-ready pouch clearly visible on desk next to laptop.",
+      "product_detail": "Two chocolate-flavored soft chews in prime focus near hand, showing smooth texture and chocolate bite.",
+      "visual_harmony": {
+        "headline_position": "anchored visually near professional’s eye line",
+        "ingredient_icons": "Cognatiq, mushrooms, caffeine appear subtly on laptop screen infographic overlay",
+        "dosing_callout": "transparent dosing callout adjacent to chews"
+      },
+      "text_overlays": "large and clear for social feed readability"
+    },
+    "overlay_text": [
+      [
+        "Smart energy",
+        "and focus"
+      ],
+      [
+        "Cognatiq",
+        "+ mushrooms",
+        "+ caffeine"
+      ],
+      [
+        "Power through",
+        "your workday"
+      ]
+    ],
+    "overlay_directives": {
+      "must_always_include": [
+        "Available on Amazon official Amazon tag",
+        "Chews Health official Logo from the references",
+        "Dynamind IQ Product image from the references"
+      ]
+    }
+  }
+}

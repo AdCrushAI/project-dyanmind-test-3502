@@ -1,0 +1,24 @@
+{
+  "persona": {
+    "slug": "busy-professionals-knowledge-workers",
+    "full_name": "Busy Professionals & Knowledge Workers",
+    "target": "28-50-year-olds managing demanding workdays with meetings, multitasking, and high-output projects",
+    "primary_pain_point": "Mental fatigue and difficulty maintaining peak cognitive performance throughout the day",
+    "value_proposition": "Dynamind IQ delivers a daily cognitive boost with smooth chocolate flavor and transparent dosing to power through work sprints"
+  },
+  "hook": {
+    "slug": "no-water-neededconvenient-for-any-work-environment",
+    "full_text": "No water needed—convenient for any work environment"
+  },
+  "style": {
+    "slug": "premium-wellness-convenience-style",
+    "full_name": "Premium Wellness & Convenience Style",
+    "palette": "Warm, sophisticated natural tones; rich chocolate browns; clean whites and soft neutrals; accent with subtle gold or bronze for premium feel",
+    "visual_cues": "Authentic lifestyle imagery integrating office desks, study areas, gym and gaming setups; product close-ups showing chew texture and packaging; pocket-ready contexts like pockets, bags, desk drawers; warm natural or soft lighting emphasizing premium chocolate and warm tones; demonstrations of no-water-needed usage in real-world on-the-go moments",
+    "notes": "Combines lifestyle integration with pocket-ready convenience messaging. Showcases seamless daily usage for busy professionals, students, gamers, and wellness enthusiasts. Focused on tangible premium sensory experience (chocolate taste, soft chew) and portability."
+  },
+  "generation": {
+    "timestamp": "2025-10-28T12:25:37.381856Z",
+    "filename": "gen_20251028_122500_01.png"
+  }
+}

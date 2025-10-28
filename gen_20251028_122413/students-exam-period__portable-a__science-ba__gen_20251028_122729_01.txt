@@ -1,0 +1,32 @@
+Facebook ad 1:1 aspect. Campaign style variant: Improves memory and focus  
+Style Palette: Clean whites and light grays for clinical clarity; subtle warm accents (soft golds or muted browns); modern blue or teal highlights to imply science and trust.  
+Style Cues: Ingredient storytelling visuals highlighting Cognatiq, functional mushrooms, caffeine; transparent labeling close-ups with clear per-chew dosing; infographic style or stepwise patterns for cognitive support and energy benefits; professional but approachable aesthetic with easy-to-understand scientific content; before/during/after usage scenarios; testimonial authenticity and compliance-conscious language.  
+Style Notes: Targets trust and transparency through educational content, making complex ingredients accessible and credible. Reinforces the brand’s science-backed foundation while maintaining approachability and ease of understanding.
+
+Top Headline (bold, sans-serif): ["Improves","memory and","focus without","crash"]
+
+Visual Structure:  
+- Primary Scene: Student studying late-night with open books and laptop, showing subtle tiredness but focused; warm desk lamp with cool ambient blue light to convey science and calm focus.  
+- Product Placement: Dynamind IQ package front and center on desk, pocket-ready pouch visible alongside 2 soft chocolate chews partially unwrapped to reveal smooth texture.  
+- Product Detail: Close-up inset of chew with transparent label overlays showing clear per-chew dosing of Cognatiq, functional mushrooms, and caffeine.  
+- Visual Harmony: Text anchored along book edges and near product package; infographic callouts subtly integrated into background.  
+- Text overlays large and crisp for social feed legibility.
+
+Overlay Text (max 3 elements):  
+1. ["Improves","memory and","focus"]  
+2. ["Study","smarter","anytime"]  
+3. ["Focus in","a Bite","Power in","Your Pocket"]  
+
+Footer / End Card:  
+- Brand logo (Chews Health) in bottom strip aligned left.  
+
+Palette & Style:  
+- Background: soft white with light gray gradient; soft gold and muted brown accent shapes behind product.  
+- Blue/teal highlight lines used in ingredient close-up callouts.  
+- Bold sans-serif for headline and overlays; medium weight for secondary text.
+
+# Overlay Directives (append at the very end)
+REQUIRED ALWAYS:
+Must Always include "Available on Amazon" official Amazon tag
+Must Always include "Chews Health" official Logo from the references
+Must Always include "Dynamind IQ Product image" from the references

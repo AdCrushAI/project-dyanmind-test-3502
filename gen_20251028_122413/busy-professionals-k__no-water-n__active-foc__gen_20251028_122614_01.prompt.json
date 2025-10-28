@@ -1,0 +1,51 @@
+{
+  "facebook_ad": {
+    "aspect_ratio": "1:1",
+    "campaign_style_variant": "Active Focus & Lifestyle Performance Style",
+    "style_palette": "Warm energizing tones like amber and burnt orange combined with natural browns and soft neutrals; balanced with deep chocolate and charcoal accents.",
+    "style_cues": "Dynamic lifestyle shot of a focused busy professional in a sleek modern office during a video meeting, slight motion blur to show multitasking energy; warm vibrant amber lighting highlights face and hands; close-up of hand reaching into jacket pocket to grab a Dynamind IQ pouch with clear product and chew visible; sharp focus on product packaging and a chocolate chew next to laptop.",
+    "style_notes": "Emphasizes seamless on-the-go brain boost amid mental fatigue and demanding work; sophisticated yet approachable tone; energetic yet natural atmosphere.",
+    "top_headline": [
+      "Smart energy",
+      "and focus",
+      "for multitasking"
+    ],
+    "visual_structure": {
+      "primary_scene": "Busy professional at desk during virtual meeting, looking engaged and alert, slight lens flare from warm light.",
+      "product_placement": "Dynamind IQ pouch in hand, prominently displayed front and center, chew partially visible.",
+      "product_detail": "One chocolate chew placed next to laptop keyboard in sharp focus.",
+      "visual_harmony": "Headline text anchored near user’s focused face; proof & benefit text anchored near product pouch and chew.",
+      "text_overlays": "Large and clear for social media feed readability."
+    },
+    "overlay_text": [
+      [
+        "Smart energy",
+        "and focus"
+      ],
+      [
+        "Cognatiq",
+        "mushrooms &",
+        "caffeine"
+      ],
+      [
+        "Power through",
+        "work sprints"
+      ]
+    ],
+    "footer_end_card": {
+      "brand_logo": "Chews Health brand logo in bottom strip with burnt orange background.",
+      "tagline": "Focus in a Bite. Power in Your Pocket."
+    },
+    "palette_and_style": {
+      "background": "Background utilizes warm neutrals and deep chocolate tones softly blending into amber highlights around product and face.",
+      "font_styles": "Bold sans-serif font for headline; medium weight for proof and benefit text."
+    }
+  },
+  "overlay_directives": {
+    "required_always": [
+      "Must Always include \"Available on Amazon\" official Amazon tag",
+      "Must Always include \"Chews Health\" official Logo from the references",
+      "Must Always include \"Dynamind IQ Product image\" from the references"
+    ]
+  }
+}

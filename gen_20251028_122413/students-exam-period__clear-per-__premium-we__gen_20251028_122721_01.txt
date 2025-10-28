@@ -1,0 +1,26 @@
+Facebook ad 1:1 aspect. Campaign style variant: Premium Wellness & Convenience Style  
+Style Palette: Warm, sophisticated natural tones; rich chocolate browns; clean whites and soft neutrals; accent with subtle gold or bronze for premium feel.  
+Style Cues: Authentic lifestyle imagery integrating a student’s cozy study area with soft natural lighting; laptop, textbooks, and notes scattered; Dynamind IQ soft chew package open on desk; one chew held between fingers ready to eat; visible pocket-ready packaging beside study materials; warm chocolate browns dominate foreground, soft neutral background.  
+Style Notes: Combines lifestyle integration with pocket-ready convenience messaging. Showcases seamless daily usage for students maintaining focus and memory during late-night study. Emphasizes premium sensory experience and portability.  
+
+Top Headline (bold, sans-serif): ["Boost","Memory","Without","the","Crash"]  
+
+Visual Structure:  
+- Primary Scene: ["Focused","25-45-year-old","student","studying","intently","late evening","glow"]  
+- Product Placement: ["Dynamind IQ","original","packaging","clearly","visible","and","open","on","desk","center"]  
+- Product Detail: ["Close-up","of","one","premium","chocolate-flavored","soft chew","with","smooth","texture","held","by","hand"]  
+- Visual Harmony: ["Text","anchored","near","chew","and","open","package","on","desktop"] ["soft warm","lamp light","highlights","chocolate","tones"]  
+
+Overlay Text (max 3 elements):  
+1. ["Boost","Memory","Without","the","Crash"]  
+2. ["Science-Backed","Cognatiq","+","Mushrooms"]  
+3. ["Focus","in a","Bite","Anytime"]  
+
+Footer / End Card:  
+- Brand logo centered in bottom strip on soft neutral background.
+
+# Overlay Directives (append at the very end)
+REQUIRED ALWAYS:
+Must Always include "Available on Amazon" official Amazon tag
+Must Always include "Chews Health" official Logo from the references
+Must Always include "Dynamind IQ Product image" from the references

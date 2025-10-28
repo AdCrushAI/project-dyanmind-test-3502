@@ -1,0 +1,104 @@
+{
+  "facebook_ad": {
+    "aspect_ratio": "1:1",
+    "campaign_style_variant": "Premium Wellness & Convenience Style",
+    "style_palette": "Warm, sophisticated natural tones; rich chocolate browns; clean whites and soft neutrals; accent with subtle gold or bronze for premium feel.",
+    "style_cues": "Authentic lifestyle imagery integrating a student’s cozy study area with soft natural lighting; laptop, textbooks, and notes scattered; Dynamind IQ soft chew package open on desk; one chew held between fingers ready to eat; visible pocket-ready packaging beside study materials; warm chocolate browns dominate foreground, soft neutral background.",
+    "style_notes": "Combines lifestyle integration with pocket-ready convenience messaging. Showcases seamless daily usage for students maintaining focus and memory during late-night study. Emphasizes premium sensory experience and portability.",
+    "top_headline": [
+      "Boost",
+      "Memory",
+      "Without",
+      "the",
+      "Crash"
+    ],
+    "visual_structure": {
+      "primary_scene": [
+        "Focused",
+        "25-45-year-old",
+        "student",
+        "studying",
+        "intently",
+        "late evening",
+        "glow"
+      ],
+      "product_placement": [
+        "Dynamind IQ",
+        "original",
+        "packaging",
+        "clearly",
+        "visible",
+        "and",
+        "open",
+        "on",
+        "desk",
+        "center"
+      ],
+      "product_detail": [
+        "Close-up",
+        "of",
+        "one",
+        "premium",
+        "chocolate-flavored",
+        "soft chew",
+        "with",
+        "smooth",
+        "texture",
+        "held",
+        "by",
+        "hand"
+      ],
+      "visual_harmony": [
+        [
+          "Text",
+          "anchored",
+          "near",
+          "chew",
+          "and",
+          "open",
+          "package",
+          "on",
+          "desktop"
+        ],
+        [
+          "soft warm",
+          "lamp light",
+          "highlights",
+          "chocolate",
+          "tones"
+        ]
+      ]
+    },
+    "overlay_text": [
+      [
+        "Boost",
+        "Memory",
+        "Without",
+        "the",
+        "Crash"
+      ],
+      [
+        "Science-Backed",
+        "Cognatiq",
+        "+",
+        "Mushrooms"
+      ],
+      [
+        "Focus",
+        "in a",
+        "Bite",
+        "Anytime"
+      ]
+    ],
+    "footer_end_card": {
+      "brand_logo": "centered in bottom strip on soft neutral background"
+    },
+    "overlay_directives": {
+      "required_always": [
+        "Must Always include \"Available on Amazon\" official Amazon tag",
+        "Must Always include \"Chews Health\" official Logo from the references",
+        "Must Always include \"Dynamind IQ Product image\" from the references"
+      ]
+    }
+  }
+}

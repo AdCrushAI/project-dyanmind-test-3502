@@ -1,0 +1,58 @@
+{
+  "facebook_ad": {
+    "aspect_ratio": "1:1",
+    "campaign_style_variant": "Premium Wellness & Convenience Style",
+    "style_palette": [
+      "Warm, sophisticated natural tones",
+      "rich chocolate browns",
+      "clean whites and soft neutrals",
+      "accent with subtle gold or bronze for premium feel"
+    ],
+    "style_cues": [
+      "Authentic lifestyle imagery integrating office desks, study areas",
+      "product close-ups showing chew texture and premium packaging",
+      "pocket-ready contexts like blazer pockets, desk drawers",
+      "warm natural lighting emphasizing premium chocolate and warm tones",
+      "demonstration of no-water-needed usage in a busy professional taking a chew during a meeting"
+    ],
+    "style_notes": "Combines lifestyle integration with pocket-ready convenience messaging. Showcases seamless daily usage for busy professionals managing demanding workdays. Focus on tangible premium sensory experience (smooth chocolate flavor, soft chew texture) and portability.",
+    "top_headline": [
+      "Smart",
+      "energy and",
+      "focus"
+    ],
+    "visual_structure": {
+      "primary_scene": "A busy professional seated at a modern office desk with laptop and notes, mid-work sprint, subtly reaching for Dynamind IQ from a blazer pocket; soft natural light filtering through a window.",
+      "product_placement": "The Dynamind IQ chew pack held visibly in hand and on desk near a notebook.",
+      "product_detail": "Close-up inset of a single premium chocolate-flavored chew showing smooth, soft texture and clear Cognatiq, mushroom, and caffeine labeling on packaging.",
+      "visual_harmony": "Text overlays anchored near the hand holding the chew, near the product pack on desk, and near the window area to balance composition.",
+      "text_overlays": [
+        [
+          "Smart",
+          "energy and",
+          "focus"
+        ],
+        [
+          "Cognatiq",
+          "+",
+          "mushrooms",
+          "+",
+          "caffeine"
+        ],
+        [
+          "Focus in",
+          "a Bite",
+          "Power in",
+          "Your Pocket"
+        ]
+      ]
+    },
+    "overlay_directives": {
+      "required_always": [
+        "Must Always include \"Available on Amazon\" official Amazon tag",
+        "Must Always include \"Chews Health\" official Logo from the references",
+        "Must Always include \"Dynamind IQ Product image\" from the references"
+      ]
+    }
+  }
+}

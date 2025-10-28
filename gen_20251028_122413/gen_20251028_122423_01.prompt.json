@@ -1,0 +1,57 @@
+{
+  "Facebook ad": {
+    "aspect_ratio": "1:1",
+    "campaign_style_variant": "Science-Backed Credibility & Educational Style",
+    "style_palette": {
+      "colors": [
+        "clean whites",
+        "light grays",
+        "subtle warm accents (soft golds or muted browns)",
+        "modern blue or teal highlights"
+      ],
+      "purpose": "clinical clarity; imply science and trust"
+    },
+    "style_cues": [
+      "Ingredient storytelling visuals highlighting Cognatiq, functional mushrooms, caffeine",
+      "transparent labeling close-ups with clear per-chew dosing",
+      "infographic style or stepwise patterns for cognitive support and energy benefits",
+      "professional but approachable aesthetic with easy-to-understand scientific content",
+      "before/during/after usage scenarios",
+      "testimonial authenticity and compliance-conscious language"
+    ],
+    "style_notes": "Targets trust and transparency through educational content, making complex ingredients accessible and credible. Reinforces the brand’s science-backed foundation while maintaining approachability and ease of understanding.",
+    "top_headline": [
+      "Smart energy",
+      "for multitasking"
+    ],
+    "visual_structure": {
+      "primary_scene": "Busy professional seated at modern desk in bright office, focused on laptop with multiple screens and notes; subtle warm light highlighting thoughtful expression; clear indication of mental fatigue with subtle overlay of brainwave lines or icons to imply focus mode activated.",
+      "product_placement": "Dynamind IQ premium chocolate-flavored soft chew packaging prominently on desk near workspace, pocket-ready pouch partially visible clipped to briefcase or pants pocket.",
+      "product_detail": "Close-up inset showing one soft chew next to packaging with transparent label callouts pointing to Cognatiq, functional mushrooms, and caffeine dosage per chew with infographic-style icons.",
+      "visual_harmony": "Overlay text anchored to workspace objects—headline near laptop, feature text near chew/pouch, CTA near briefcase clip.",
+      "text_overlays": "Text overlays sized for clear social media readability."
+    },
+    "overlay_text": [
+      [
+        "Smart energy",
+        "for multitasking"
+      ],
+      [
+        "Cognatiq",
+        "+ mushrooms",
+        "+ caffeine"
+      ],
+      [
+        "Focus in",
+        "a bite"
+      ]
+    ],
+    "overlay_directives": {
+      "must_always_include": [
+        "\"Available on Amazon\" official Amazon tag",
+        "\"Chews Health\" official Logo from the references",
+        "\"Dynamind IQ Product image\" from the references"
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+Facebook ad 1:1 aspect. Campaign style variant: Premium Wellness & Convenience Style.
+
+Top Headline (bold, sans-serif): ["Smart","energy","and focus"]
+
+Primary Scene: Busy professional at a sleek office desk, mid-meeting on laptop, with subtle warm natural lighting highlighting a clean, organized workspace in rich chocolate brown and soft neutrals. A subtle soft-focus background shows briefcase and jacket pocket slightly open to reveal the Dynamind IQ pocket pack. Lens offers a natural warm glow emphasizing premium feel.
+
+Product Placement: Dynamind IQ product packaging front and center on the desk, sharply in focus with chocolate-flavored soft chews beside it clearly showing texture. Packaging design matches authentic brand references exactly.
+
+Product Detail: Two chocolate-coated Dynamind IQ soft chews in prime focus near package opening, showcasing smooth texture and bite-sized form.
+
+Visual Harmony: Text overlays anchored near the package and professional’s hand reaching for a chew; desk elements complement with warm tones and sophisticated accents.
+
+Overlay Text:
+1. ["Smart","energy","and focus"]
+2. ["Cognatiq","+","mushrooms","+","caffeine"]
+3. ["Power through","your workday"]
+
+# Overlay Directives (append at the very end)
+REQUIRED ALWAYS:
+Must Always include "Available on Amazon" official Amazon tag
+Must Always include "Chews Health" official Logo from the references
+Must Always include "Dynamind IQ Product image" from the references
